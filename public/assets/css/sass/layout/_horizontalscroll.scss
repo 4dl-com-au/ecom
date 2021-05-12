@@ -1,0 +1,116 @@
+/*
+    CSS Table of Sections
+    --------------------------
+    ** Slide_horizontal_scroll
+    --------------------------
+
+*/
+
+/*-----------------------------
+  Slide_horizontal_scroll
+-----------------------------*/
+.Slide_horizontal_scroll {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  .title_svg {
+    width: 100%;
+    position: absolute;
+    left: -5%;
+    top: 0;
+  }
+  .item_slide {
+    .block_img {
+      margin: 0 2rem 0 0;
+      position: relative;
+      .item__name {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        background: rgb(2, 12, 32);
+        background: -moz-linear-gradient(
+          360deg,
+          rgba(2, 12, 32, 0.45) 0%,
+          rgba(2, 12, 32, 0) 100%
+        );
+        background: -webkit-linear-gradient(
+          360deg,
+          rgba(2, 12, 32, 0.45) 0%,
+          rgba(2, 12, 32, 0) 100%
+        );
+        background: linear-gradient(
+          360deg,
+          rgba(2, 12, 32, 0.45) 0%,
+          rgba(2, 12, 32, 0) 100%
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020c20",endColorstr="#020c20",GradientType=1);
+        opacity: 0;
+        @include prefixer(transition, 0.3s, webkit moz o ms);
+        .txt {
+          position: absolute;
+          text-align: left;
+          bottom: 5%;
+          left: 5%;
+          @include prefixer(transition, 0.3s, webkit moz o ms);
+          h4 {
+            text-align: left;
+            color: $white-color;
+            font-size: 30px;
+          }
+          .txt1 {
+            transform: translateY(20px);
+            transition: transform 0.5s cubic-bezier(0.42, 0, 0, 0.99),
+              -webkit-transform 0.5s cubic-bezier(0.42, 0, 0.03, 0.99);
+          }
+          .txt2 {
+            transform: translateY(30px);
+            transition: transform 0.7s cubic-bezier(0.42, 0, 0, 0.99),
+              -webkit-transform 0.7s cubic-bezier(0.42, 0, 0.03, 0.99);
+          }
+        }
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      &:hover {
+        .item__name {
+          opacity: 1;
+          .txt1 {
+            transform: translateY(0);
+          }
+          .txt2 {
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+  }
+}
+#pinContainer {
+  overflow: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+}
+#slideContainer {
+  width: 412%;
+  @include maxMobile {
+    width: 1590%;
+  }
+  .row {
+    display: block;
+  }
+}
+.panel {
+  padding: 4rem 0 0 0;
+  width: 20%;
+  float: left;
+  text-align: center;
+  @include maxMobile {
+    width: 15%;
+  }
+}

@@ -1,0 +1,80 @@
+/*
+    CSS Table of Sections
+    --------------------------
+    ** slider_section
+    --------------------------
+
+*/
+
+/*-----------------------------
+  slider_section
+-----------------------------*/
+.slider_section {
+  .swiper-container {
+    .swiper-wrapper {
+      margin-bottom: 3rem;
+      .swiper-slide {
+        width: 800px;
+        height: 500px;
+        @include prefixer(transition, .3s, webkit moz o ms);
+        &::before {
+          content: '';
+          @include overlay;
+          background: rgba($dark-color, .4);
+          @include prefixer(transition, .3s, webkit moz o ms);
+        }
+        img {
+          width: 800px;
+          height: 500px;
+          object-fit: cover;
+        }
+        &.swiper-slide-active {
+          &::before {
+            background: rgba($dark-color, 0);
+          }
+        }
+      }
+    }
+    .swiper-button-next {
+      width: 50px;
+      height: 50px;
+      background-color: $white-color;
+      border-radius: 50%;
+      right: 20px;
+      &::after {
+        content: '\e9b3';
+        font-family: 'The-Icon-of';
+        font-size: 22px;
+        color: $dark-color;
+      }
+    }
+    .swiper-button-prev {
+      width: 50px;
+      height: 50px;
+      background-color: $white-color;
+      border-radius: 50%;
+      left: 20px;
+      &::after {
+        content: '\e9b2';
+        font-family: 'The-Icon-of';
+        font-size: 22px;
+        color: $dark-color;
+      }
+    }
+    .swiper-pagination-progressbar {
+      bottom: 0;
+      top: inherit;
+      height: 1.5px;
+      left: 22.7%;
+      width: 78%;
+      background: rgba($dark-color, .05);
+      @include maxMobile {
+        width: 100%;
+        left: 0;
+      }
+      .swiper-pagination-progressbar-fill {
+        background: $dark-color;
+      }
+    }
+  }
+}

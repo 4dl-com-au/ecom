@@ -1,0 +1,40 @@
+/*
+    CSS Table of components
+    --------------------------
+    ** breadcrumb - default
+    --------------------------
+*/
+
+.breadcrumb {
+  /*-----------------------------
+     default
+-----------------------------*/
+  &.default {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 0;
+    .breadcrumb-item {
+      &::before {
+        font-family: "The-Icon-of";
+        content: "\e9b3";
+        vertical-align: middle;
+        font-size: 15px;
+      }
+      &:first-of-type {
+        &::before {
+          display: none;
+        }
+      }
+      a {
+        font-size: 15px;
+        font-weight: 400;
+        color: $dark-color;
+      }
+      &.active {
+        a {
+          color: $gray-color;
+        }
+      }
+    }
+  }
+}

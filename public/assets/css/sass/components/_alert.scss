@@ -1,0 +1,63 @@
+.alert {
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  border: 0;
+  color: $dark-color;
+  a {
+    color: $dark-color;
+    font-weight: 500;
+    @include prefixer(transition, 0.3s, webkit moz o ms);
+    &:hover {
+      color: $blue-color;
+    }
+  }
+  .close {
+    top: auto;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    opacity: 1 !important;
+    border-radius: 50%;
+    background-color: rgba($dark-color, 0.01);
+    padding: 0;
+    @include prefixer(transition, 0.3s, webkit moz o ms);
+    box-shadow: none !important;
+    text-shadow: none !important;
+    .tio {
+      font-size: 18px;
+      color: $dark-color;
+    }
+    &:hover {
+      background-color: rgba($dark-color, 0.05);
+    }
+  }
+  &.alert-warning {
+    background-color: rgba($yollow-color, 0.15);
+  }
+  &.alert-primary {
+    background-color: rgba($blue-color, 0.15);
+  }
+  &.alert-secondary {
+    background-color: rgba($gray-color, 0.15);
+  }
+  &.alert-success {
+    background-color: rgba($green2-color, 0.15);
+  }
+  &.alert-danger {
+    background-color: rgba($red-color, 0.15);
+  }
+  &.alert-info {
+    background-color: rgba($sky-color, 0.15);
+  }
+  &.alert-light {
+    background-color: rgba($white-color, 0.15);
+  }
+  &.alert-dark {
+    background-color: rgba($dark-color, 0.15);
+  }
+}

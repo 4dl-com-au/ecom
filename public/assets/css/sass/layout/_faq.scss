@@ -1,0 +1,346 @@
+/*
+    CSS Table of Sections
+    --------------------------
+    ** faq_section
+    --------------------------
+    ** faq_demo2
+    --------------------------
+    ** faq_demodark (dark crypto)
+    --------------------------
+    ** faq_demo3
+    --------------------------
+    ** faq_demo4
+    --------------------------
+    ** faq_demo5
+    --------------------------
+    **faq_one_inner
+    --------------------------
+    **faq_two_inner
+    --------------------------
+*/
+
+/*-----------------------------
+  faq_section
+-----------------------------*/
+.faq_section {
+  background-color: $bg-color;
+  padding-top: 25rem;
+  padding-bottom: 7.5rem;
+  margin-top: -15rem;
+  @include maxSmall {
+    padding-top: 12rem;
+  }
+  .accordion {
+    .card {
+      border-radius: 8px;
+      border: 0;
+      margin-bottom: 1rem;
+      .card-header {
+        border-color: $border-color;
+        background-color: $white-color;
+        border-radius: 8px;
+        border-bottom: 0;
+        .btn-link {
+          display: contents;
+          &::before {
+            font-family: "The-Icon-of" !important;
+            content: "\e9b1";
+            float: right;
+            margin-top: 0.4rem;
+            font-size: 20px;
+            color: $gray-color;
+            @include prefixer(transition, 0.4s, webkit moz o ms);
+          }
+        }
+        &.active {
+          .btn-link {
+            &::before {
+              @include prefixer(transform, rotate(180deg), webkit moz o ms);
+            }
+          }
+        }
+        h3 {
+          .btn-link {
+            color: $dark-color;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+      .card-body {
+        p {
+          font-size: 14px !important;
+          color: $gray-color !important;
+          font-weight: 400 !important;
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  faq_demo2
+-----------------------------*/
+.faq_demo2 {
+  .item_list {
+    margin-bottom: 2rem;
+    h4 {
+      font-size: 18px;
+      font-weight: 500;
+      color: $dark-color;
+      margin-bottom: 1.25rem;
+    }
+    p {
+      font-size: 14px;
+      color: $gray-color;
+      font-weight: 400;
+    }
+  }
+}
+
+/*-----------------------------
+  faq_demodark (dark crypto)
+-----------------------------*/
+.faq_demodark {
+  background-color: transparent;
+  padding-bottom: 0;
+  .block_faq {
+    .accordion {
+      .card {
+        background-color: #340e48;
+        .card-header {
+          background-color: #340e48;
+          &.active {
+            border: 1px solid rgba($magenta-color, 0.18);
+            border-bottom: 0;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            & ~ div {
+              border: 1px solid rgba($magenta-color, 0.18);
+              border-top: 0;
+              border-bottom-left-radius: 6px;
+              border-bottom-right-radius: 6px;
+            }
+          }
+          .btn-link {
+            color: $white-color;
+          }
+        }
+        .card-body {
+          p {
+            color: $currency-p-color !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  faq_demo3
+-----------------------------*/
+.faq_demo3 {
+  position: relative;
+  background-color: $white-color;
+  margin-top: -10rem;
+  z-index: 2;
+  padding-top: 0;
+  padding-bottom: 0;
+  @include prefixer(
+    box-shadow,
+    0px -200px 60px -200px rgba(11, 34, 56, 0.04),
+    webkit moz o ms
+  );
+  @include maxSmall {
+    @include prefixer(
+      box-shadow,
+      0px -100px 60px -100px rgba(11, 34, 56, 0.04),
+      webkit moz o ms
+    );
+    margin-top: -5rem;
+  }
+  .block_faq {
+    .card {
+      border: 1px solid$border-color;
+    }
+  }
+  &.shadow-none {
+    @include prefixer(box-shadow, nnoe, webkit moz o ms);
+  }
+}
+
+/*-----------------------------
+  faq_demo4
+-----------------------------*/
+.faq_demo4 {
+  background-color: rgba($dark-color, 0.03);
+  padding-bottom: 7.5rem;
+  .item_list {
+    h4 {
+      &:before {
+        content: "";
+        width: 13px;
+        height: 15px;
+        border-radius: 4px;
+        background-color: $beiget-color;
+        display: inline-block;
+        position: absolute;
+        left: -5px;
+        @include maxMobile {
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  faq_demo5
+-----------------------------*/
+
+.faq_demo5 {
+  margin-top: 0;
+  padding-bottom: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 12%;
+    background-image: url("../img/ill_faq.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 408px;
+    height: 444px;
+    @include maxSmall {
+      left: 0;
+    }
+    @include maxMobile {
+      display: none;
+    }
+  }
+  .block_faq {
+    .card {
+      .card-header {
+        border: 1px solid$border-color;
+        background-color: $white-color;
+        .simple_desc {
+          font-size: 12px;
+          color: $gray-color;
+          text-align: left;
+          font-weight: 400;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  faq_one_inner
+-----------------------------*/
+.faq_one_inner {
+  background-color: $white-color;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  width: 95%;
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  margin-top: -28.125rem;
+  @include maxSmall {
+    width: 100%;
+  }
+  .title_sections {
+    margin-bottom: 1.25rem;
+  }
+  .features_points {
+    .title_sections {
+      margin-bottom: 2.5rem;
+    }
+    .list_feat {
+      li {
+        display: flex;
+        margin-bottom: 1.875rem;
+        padding: 0;
+        p {
+          color: $gray-color;
+          font-size: 17px;
+          margin-bottom: 0;
+        }
+        .tio {
+          display: inline-block;
+          color: $green2-color;
+          font-size: 20px;
+          vertical-align: middle;
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+}
+
+.faq_with_icon {
+  margin-top: 0;
+  .accordion {
+    .card {
+      border: 0 !important;
+      .card-header {
+        background-color: $bg-color;
+        .btn-link {
+          .tio {
+            color: $dark-color;
+            vertical-align: middle;
+            font-size: 18px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.information__contact {
+  .icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid$border-color;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.875rem;
+    .tio {
+      font-size: 22px;
+    }
+  }
+  .txt {
+    padding-right: 1.25rem;
+    h4 {
+      font-weight: 500;
+      color: $dark-color;
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+    p {
+      color: $gray-color;
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+/*-----------------------------
+  faq_two_inner
+-----------------------------*/
+.faq_two_inner {
+  .faq_one_inner {
+    width: 100%;
+    border-radius: 8px;
+    background-color: $white-color;
+  }
+}

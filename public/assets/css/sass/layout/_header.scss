@@ -1,0 +1,658 @@
+/*
+    CSS Table of Sections
+    --------------------------
+    ** Style header Default
+    --------------------------
+    ** header-nav-center
+    --------------------------
+    ** header-nav-left
+    --------------------------
+    ** Fixed header
+    --------------------------
+    ** header-Crypto
+    --------------------------
+    ** header-Crypto Dark
+    --------------------------
+    ** Fixed side menu
+    --------------------------
+    ** header charity
+    --------------------------
+    ** head_host
+    --------------------------
+    ** demo_body_interior (header)
+     --------------------------
+    ** header Charity - left
+     --------------------------
+    ** header__workspace
+     --------------------------
+     ** header_software
+     --------------------------
+     **white_scroll_dark
+     --------------------------
+     **header-black
+     --------------------------
+     
+*/
+
+/*-----------------------------
+  Style header Default
+-----------------------------*/
+header {
+  z-index: 9;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid rgba($dark-color, 0);
+  @include prefixer(backdrop-filter, saturate(1) blur(20px), webkit moz o ms);
+  @include prefixer(transition, 0.3s, webkit moz o ms);
+  &.no_blur {
+    @include prefixer(backdrop-filter, none, webkit moz o ms);
+  }
+  .fixed-header & {
+    background: rgba(255, 255, 255, 0.8);
+    // This filter is not currently
+    // supported on Firefox
+    @include prefixer(backdrop-filter, saturate(1) blur(20px), webkit o ms);
+    border-bottom: 1px solid $border-color;
+    // == for Firefox 😉 ==
+    @-moz-document url-prefix() {
+      background: rgba(255, 255, 255, 1);
+      border-bottom: 0 !important;
+      backdrop-filter: saturate(1) blur(0);
+      box-shadow: 0px 10px 40px 0px rgba(11, 34, 56, 0.05);
+    }
+  }
+  .navbar {
+    height: 80px;
+    padding: 0;
+    .navbar-brand {
+      font-weight: 600;
+      font-size: 22px;
+      .logo {
+        vertical-align: bottom;
+        margin-right: 0.5rem;
+        width: 27px;
+      }
+    }
+    .navbar-collapse {
+      margin-top: 0.4rem;
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            font-size: 16px;
+            font-weight: 400;
+            text-transform: capitalize;
+            margin-right: 1.25rem;
+            background-color: transparent;
+            @include maxSmall {
+              padding: 0.75rem 0;
+            }
+          }
+        }
+        .dropdown {
+          &.show {
+            .nav-link {
+              color: $blue-color !important;
+            }
+          }
+        }
+      }
+      .nav_account {
+        .btn {
+          font-size: 15px;
+        }
+        &.btn_demo2 {
+          .btn_sm_primary {
+            background-color: rgba($blue-color, 0.1);
+            color: $blue-color;
+          }
+        }
+        &.btn_demo3 {
+          .btn_sm_primary {
+            border: 1px solid$border-color;
+          }
+        }
+      }
+    }
+  }
+  @include maxSmall {
+    background: $white-color;
+    // @include prefixer(backdrop-filter, saturate(1) blur(20px), webkit moz o ms);
+    .navbar-toggler {
+      &:focus {
+        border: 0;
+        outline: 0;
+        box-shadow: none;
+      }
+    }
+    .navbar {
+      height: auto;
+      padding: 0.75rem;
+    }
+    .navbar-brand {
+      color: $dark-color !important;
+      font-size: 18px !important;
+      .logo {
+        width: 24px !important;
+      }
+    }
+    .navbar-collapse {
+      margin-left: 0 !important;
+      .navbar-nav {
+        padding-bottom: 1rem;
+        .nav-item {
+          .nav-link {
+            color: $dark-color !important;
+            &.active {
+              color: $blue-color !important;
+            }
+          }
+        }
+      }
+      .nav_account {
+        border-top: 1px solid $border-color;
+        padding: 1rem 0;
+        .btn-default {
+          color: $dark-color !important;
+        }
+        .btn-primary {
+          background-color: $blue-color !important;
+          color: $white-color !important;
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  header-nav-center
+-----------------------------*/
+.header-nav-center {
+  width: 100%;
+  left: 0;
+  z-index: 12;
+  .navbar-brand {
+    color: $dark-color;
+  }
+  .navbar-collapse {
+    .nav-item {
+      .nav-link {
+        color: $dark-color;
+        @include prefixer(transition, 0.4s, webkit moz o ms);
+        &:hover {
+          color: $blue-color;
+        }
+        &.active {
+          color: $blue-color;
+          background-color: transparent;
+        }
+      }
+      &.active {
+        .nav-link {
+          color: $blue-color;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  header-nav-left
+-----------------------------*/
+.header-nav-left {
+  .navbar-collapse {
+    margin-left: 2rem;
+  }
+}
+.header-nav-left {
+  &.light {
+    .nav-pills {
+      .nav-item {
+        .nav-link {
+          color: $white-color;
+          &.active {
+            color: $beiget-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  Fixed header
+-----------------------------*/
+.fixed-header {
+  header {
+    @include maxSmall {
+      background: $white-color !important;
+    }
+    &.nav-product {
+      .navbar-brand {
+        color: $dark-color !important;
+      }
+      .nav-pills {
+        .nav-item {
+          .nav-link {
+            color: $dark-color !important;
+            &.active {
+              color: $blue-color !important;
+            }
+          }
+        }
+      }
+      .nav_account {
+        .btn-default {
+          color: $dark-color !important;
+        }
+        .btn-primary {
+          background-color: $blue-color !important;
+          color: $white-color !important;
+        }
+      }
+    }
+  }
+  .gch_header_light {
+    .navbar {
+      .navbar-collapse {
+        .navbar-nav {
+          .nav-item {
+            .nav-link {
+              color: $white-color;
+              border-radius: 0;
+              line-height: 54px;
+              &.active {
+                @include prefixer(
+                  box-shadow,
+                  0px 3px 0px 0px rgba($blue-color, 1),
+                  webkit moz o ms
+                );
+                @include maxMobile {
+                  @include prefixer(box-shadow, none, webkit moz o ms);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  header-Crypto
+-----------------------------*/
+.header-nav-left {
+  &.crypto_1 {
+    .nav-pills {
+      .nav-item {
+        .nav-link {
+          &.active {
+            color: $orange-red-color !important;
+          }
+        }
+      }
+    }
+    .fixed-header & {
+      .nav-pills {
+        .nav-item {
+          .nav-link {
+            &.active {
+              color: $orange-red-color !important;
+            }
+          }
+        }
+      }
+      .nav_account {
+        .btn-primary {
+          background-color: $orange-red-color !important;
+        }
+      }
+    }
+    .nav_account {
+      .btn-primary {
+        background-color: $orange-red-color !important;
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  header-Crypto Dark
+-----------------------------*/
+.crypto_dark {
+  background-color: transparent;
+  position: absolute;
+  @include prefixer(backdrop-filter, saturate(1) blur(0), webkit moz o ms);
+  .nav_account {
+    .btn_try {
+      background-color: rgba($white-color, 0.1) !important;
+      color: $white-color;
+      @include maxMobile {
+        background-color: rgba($dark-color, 0.1) !important;
+        color: $dark-color !important;
+      }
+    }
+    .drop_download {
+      @include maxMobile {
+        display: none;
+        background-color: rgba($dark-color, 0.1);
+        color: $dark-color;
+      }
+    }
+    .btn-default {
+      @include maxMobile {
+        color: $dark-color;
+      }
+    }
+  }
+  @include maxMobile {
+    position: fixed;
+    background: rgba(255, 255, 255, 0.8);
+    @include prefixer(backdrop-filter, saturate(1) blur(20px), webkit moz o ms);
+    @-moz-document url-prefix() {
+      background: rgba(255, 255, 255, 1);
+      border-bottom: 0 !important;
+      box-shadow: 0px 10px 40px 0px rgba(11, 34, 56, 0.05);
+    }
+  }
+}
+
+/*-----------------------------
+  Fixed side menu
+-----------------------------*/
+.fixed_side_menu {
+  position: fixed !important;
+  right: 1%;
+  top: 35%;
+  z-index: 3;
+  .nav-item {
+    .nav-link {
+      position: relative;
+      color: $currency-p-color;
+      font-size: 16px;
+      direction: rtl;
+      text-align: right;
+      @include prefixer(transition, 0.3s, webkit moz o ms);
+      &::before {
+        content: "";
+        position: absolute;
+        top: 1.1rem;
+        right: -0.8rem;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: $white-color;
+        opacity: 0;
+        @include prefixer(transition, 3s, webkit moz o ms);
+      }
+      &.active {
+        background-color: transparent;
+        color: $white-color;
+        &:before {
+          opacity: 1;
+          @include prefixer(animation, bounce-top 0.9s both, webkit moz o ms);
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  header charity
+-----------------------------*/
+.gch_header_light {
+  border-bottom: 1px solid rgba($white-color, 0.15);
+  @include prefixer(backdrop-filter, saturate(1) blur(0), webkit moz o ms);
+  .navbar-brand {
+    color: $white-color;
+  }
+  .navbar {
+    .navbar-collapse {
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            color: $white-color;
+            border-radius: 0;
+            line-height: 54px;
+            @include maxMobile {
+              line-height: inherit;
+            }
+            &.active {
+              @include prefixer(
+                box-shadow,
+                0px 3px 0px 0px rgba($white-color, 1),
+                webkit moz o ms
+              );
+              @include maxMobile {
+                @include prefixer(box-shadow, none, webkit moz o ms);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  head_host
+-----------------------------*/
+.head_host {
+  border-bottom: 0;
+  .navbar {
+    .navbar-brand {
+      color: $white-color;
+    }
+    .navbar-collapse {
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            color: $white-color;
+            &.active {
+              color: $blue-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  page interior - header
+-----------------------------*/
+.demo_body_interior {
+  .header-nav-center {
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 45px;
+    @include maxMobile {
+      top: 20px;
+    }
+  }
+  &.fixed-header {
+    .header-nav-center {
+      top: 0;
+    }
+  }
+}
+
+/*-----------------------------
+  header Charity - left
+-----------------------------*/
+.header_ch_left {
+  .navbar-collapse {
+    margin-left: 6.25rem;
+    .nav-item {
+      .nav-link {
+        color: $light-color;
+        &:hover {
+          color: $dark-color;
+        }
+        &.active {
+          color: $orange-red-color;
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  header__workspace
+-----------------------------*/
+
+.header__workspace {
+  .navbar-collapse {
+    margin-left: 0;
+  }
+  .btn_demo3 {
+    .btn {
+      border: 1px solid rgba($orange-red-color, 0.25) !important;
+      color: $orange-red-color;
+    }
+  }
+}
+
+/*-----------------------------
+  header_software
+-----------------------------*/
+.header_software {
+  .navbar-collapse {
+    .nav-item {
+      .nav-link {
+        color: $gray-color;
+        &:hover,
+        :focus {
+          color: $green2-color;
+        }
+        &.active {
+          color: $white-color;
+        }
+      }
+    }
+  }
+  .btn_demo3 {
+    .btn {
+      background-color: rgba($green2-color, 0.1);
+      color: $green2-color;
+      border: 0 !important;
+    }
+  }
+}
+
+.fixed-header {
+  .header_software {
+    .navbar-collapse {
+      .nav-item {
+        .nav-link {
+          &.active {
+            color: $green2-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  white_scroll_dark
+-----------------------------*/
+.white-scroll-dark {
+  .navbar {
+    .navbar-collapse {
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            color: $white-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.fixed-header {
+  .white-scroll-dark {
+    .navbar {
+      .navbar-collapse {
+        .navbar-nav {
+          .nav-item {
+            .nav-link {
+              color: $dark-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  header-black 
+-----------------------------*/
+.header-black {
+  .navbar {
+    .navbar-collapse {
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            color: $white-color;
+          }
+        }
+      }
+    }
+  }
+  .nav_account {
+    @include maxSmall {
+      .filter-blur {
+        background: $black-color !important;
+        color: $white-color !important;
+      }
+    }
+  }
+}
+.fixed-header {
+  .header-black {
+    background: rgba($black-color, 0.6);
+    border-bottom: 1px solid rgba($white-color, 0.12);
+    .navbar {
+      .navbar-collapse {
+        .navbar-nav {
+          .nav-item {
+            .nav-link {
+              color: $white-color;
+            }
+          }
+        }
+      }
+      .filter-blur {
+        @include prefixer(backdrop-filter, none, webkit moz o ms);
+        background: $white-color !important;
+        color: $black-color !important;
+      }
+    }
+    .nav_account {
+      @include maxSmall {
+        .filter-blur {
+          background: $black-color !important;
+          color: $white-color !important;
+        }
+      }
+    }
+  }
+}
+
+// Change background white on Scroll Down
+.fixed-header {
+  .nav_account {
+    .bg-white {
+      background-color: $dark-color !important;
+      color: $white-color !important;
+    }
+  }
+}

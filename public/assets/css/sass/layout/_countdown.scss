@@ -1,0 +1,25 @@
+/*-----------------------------
+  Countdown-timer
+-----------------------------*/
+.Countdown-timer {
+  .item {
+    display: inline-block;
+    text-align: center;
+    margin: 0 1.5rem;
+    span {
+      font-size: 50px;
+      font-weight: 500;
+      color: $dark-color;
+    }
+    p {
+      color: $gray-color;
+      font-size: 18px;
+      text-transform: capitalize;
+    }
+  }
+  .cuot {
+    position: absolute;
+    font-size: 50px;
+    color: $dark-color;
+  }
+}

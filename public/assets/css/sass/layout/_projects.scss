@@ -1,0 +1,93 @@
+/*
+    CSS Table of Sections
+    --------------------------
+    ** projects_devloper
+    --------------------------
+
+*/
+
+/*-----------------------------
+  projects_devloper
+-----------------------------*/
+.projects_devloper {
+  .item_project {
+    display: block;
+    text-decoration: none;
+    .img_cover {
+      position: relative;
+      overflow: hidden;
+      img,
+      video {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        @include prefixer(
+          transition,
+          0.4s cubic-bezier(0.65, 0.05, 0.36, 1),
+          webkit moz o ms
+        );
+        @include prefixer(transform, scale3d(1, 1, 1), webkit moz o ms);
+      }
+      .open_source {
+        position: absolute;
+        background-color: $black-color;
+        border-radius: 50px;
+        z-index: 1;
+        bottom: 25px;
+        left: 25px;
+        padding: 11px 20px;
+        span {
+          font-size: 13px;
+          color: $white-color;
+        }
+        .tio {
+          color: $white-color;
+          font-size: 24px;
+          vertical-align: middle;
+          display: inline-block;
+          margin-right: 6px;
+        }
+      }
+      margin-bottom: 30px;
+    }
+    .conent_text {
+      span {
+        display: block;
+        font-size: 14px;
+        color: $gray-color;
+        margin-bottom: 10px;
+      }
+      h3 {
+        color: $dark-color;
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 10px;
+      }
+      .link_view {
+        display: block;
+        color: $blue-color;
+        font-size: 16px;
+        text-transform: capitalize;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(10px);
+        position: relative;
+        @include prefixer(transition, 0.3s, webkit moz o ms);
+      }
+    }
+    &:hover {
+      .img_cover {
+        img {
+          @include prefixer(transform, scale3d(1.1, 1.1, 1), webkit moz o ms);
+        }
+      }
+      .conent_text {
+        .link_view {
+          visibility: visible;
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+/*
+    CSS Table of Sections
+    --------------------------
+    ** Domain Search
+    --------------------------
+*/
+/*-----------------------------
+  Domain Search
+-----------------------------*/
+.search_section {
+  background-color: rgba($dark-color, 0.03);
+  .domain_search {
+    .input-group {
+      input {
+        height: 65px;
+        border: 0;
+        border-radius: 8px;
+        background-color: $white-color;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        // border-right: 1px solid$border-color;
+        padding: 0 2rem;
+        @include maxMobile {
+          border-radius: 8px;
+        }
+      }
+
+      .input-group-append {
+        position: relative;
+        &:before {
+          content: "";
+          border-left: 1px solid$border-color;
+          width: 1px;
+          height: 40px;
+          margin: auto;
+          position: relative;
+          z-index: 20;
+          @include maxMobile {
+            border-left: 0;
+          }
+        }
+        .select_item {
+          border: 0;
+          height: 65px;
+          border-radius: 0;
+          min-width: 130px;
+          background-color: $white-color !important;
+          &:focus {
+            outline: 0;
+            @include prefixer(box-shadow, none, webkit moz o ms);
+          }
+          @include maxMobile {
+            border-radius: 8px;
+            margin-top: 1rem;
+          }
+          &.custom-select {
+            background-color: $white-color;
+            background: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Edown_key%3C/title%3E%3Cpath d='M12.72,15.78a.75.75,0,0,1-.53.22h-.38a.77.77,0,0,1-.53-.22L6.15,10.64a.5.5,0,0,1,0-.71l.71-.71a.49.49,0,0,1,.7,0L12,13.67l4.44-4.45a.5.5,0,0,1,.71,0l.7.71a.5.5,0,0,1,0,.71Z'/%3E%3C/svg%3E")
+              no-repeat right 0.75rem center/18px 20px;
+          }
+        }
+        .bg_button {
+          background-color: $white-color;
+          border: 0;
+          border-radius: 0;
+          border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+          padding-left: 1.5rem;
+          @include maxMobile {
+            background-color: transparent;
+            margin-top: 1rem;
+          }
+        }
+        .btn_search {
+          border-radius: 8px;
+          background-color: $red-color;
+          color: $white-color;
+          padding: 0 2.5rem;
+          height: 65px;
+        }
+      }
+    }
+  }
+  .name_domain {
+    margin-top: 2rem;
+    .do_main {
+      display: inline-block;
+      color: $dark-color;
+      font-size: 15px;
+      font-weight: 500;
+      margin: 0 1rem;
+      span {
+        color: $gray-color;
+        font-size: 13px;
+        font-weight: 500;
+      }
+    }
+  }
+}

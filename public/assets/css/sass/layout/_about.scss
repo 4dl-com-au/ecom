@@ -1,0 +1,459 @@
+/*
+    CSS Table of Sections
+    --------------------------
+    ** about_section
+    --------------------------
+    ** about_ir
+    --------------------------
+    ** about_currency
+    --------------------------
+    ** gb_abou_ga
+    --------------------------
+    ** gzq_about
+    --------------------------
+    ** money_section
+    --------------------------
+    ** abo_company
+    --------------------------
+    ** about_agency
+    --------------------------
+    ** about__office
+    --------------------------
+    **about_cc_grid
+    --------------------------
+    **our_story
+    --------------------------
+    **about_developer
+    --------------------------
+    
+*/
+
+/*-----------------------------
+  about_section
+-----------------------------*/
+.about_section {
+  .img-products {
+    margin-top: -4rem;
+    @include maxMobile {
+      margin-top: 2rem;
+    }
+    .pro--img {
+      object-fit: cover;
+      height: 650px;
+      border-radius: 10px;
+    }
+  }
+  .logo_items {
+    .items {
+      .item-client {
+        margin-left: 0;
+        margin-right: 1.5rem;
+        img {
+          width: 90px;
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  about_ir
+-----------------------------*/
+.about_ir {
+  .aboutme_gs {
+    p {
+      font-size: 16px;
+      color: $gray-color;
+      font-weight: 400;
+    }
+  }
+}
+
+/*-----------------------------
+  about_currency
+-----------------------------*/
+.about_currency {
+  .title_sections {
+    h2 {
+      color: $white-color;
+    }
+    p {
+      color: $currency-p-color;
+    }
+  }
+}
+
+/*-----------------------------
+  gb_abou_ga (agency)
+-----------------------------*/
+.gb_abou_ga {
+  .gz_name {
+    margin-bottom: 2rem;
+    h4 {
+      font-size: 18px;
+      font-weight: 500;
+      span {
+        color: $sea-color;
+      }
+    }
+    p {
+      color: $gray-color;
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+  }
+}
+
+/*-----------------------------
+  gzq_about (Charity)
+-----------------------------*/
+.gzq_about {
+  ul {
+    li {
+      color: $dark-color;
+      padding-bottom: 0.75rem;
+      font-size: 16px;
+    }
+  }
+}
+
+/*-----------------------------
+  money_section
+-----------------------------*/
+.money_section {
+  position: relative;
+  overflow: hidden;
+  .title_sections {
+    margin-bottom: 2.5rem;
+  }
+  .img_hand {
+    margin-top: -2rem;
+    margin-left: 8rem;
+    @include maxSmall {
+      margin-left: auto;
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+}
+
+/*-----------------------------
+  abo_company
+-----------------------------*/
+.abo_company {
+  position: relative;
+  margin-top: -16rem;
+  @include maxMobile {
+    margin-top: 2rem;
+  }
+  .gq_item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    padding: 2rem;
+    height: 530px;
+    min-height: 530px;
+    @include maxMobile {
+      height: 100%;
+    }
+    .title_sections {
+      margin-bottom: 0;
+      margin-top: 9rem;
+      p {
+        margin-bottom: 0;
+      }
+    }
+    &.ill_item {
+      .ill_sec {
+        margin: 3rem 0;
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+      }
+      .title_sections {
+        margin-top: 0;
+      }
+    }
+  }
+  .emo {
+    &:nth-of-type(1) {
+      .gq_item {
+        background-color: $blue-color;
+      }
+    }
+    &:nth-of-type(2) {
+      .gq_item {
+        background-color: #e9f0ff;
+      }
+    }
+    &:nth-of-type(3) {
+      .gq_item {
+        background-color: #f6eef4;
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  about_agency
+-----------------------------*/
+.about_agency {
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: "";
+    display: block;
+    background: url("../img/agency/grid.svg");
+    background-repeat: no-repeat;
+    width: 820px;
+    height: 260px;
+    position: absolute;
+    right: -2rem;
+    top: 9rem;
+    @include maxSmall {
+      right: 0;
+      width: 100px;
+    }
+    @include maxMobile {
+      display: none;
+    }
+  }
+  .title_sections {
+    .inside_pic {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      margin-top: 1rem;
+    }
+  }
+  .pro_agency {
+    margin-top: 5rem;
+    @include maxMobile {
+      margin-top: 2rem;
+    }
+    img {
+      height: 670px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      @include maxMobile {
+        height: 350px;
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  about__office
+-----------------------------*/
+.about__office {
+  .head__picture {
+    margin-bottom: 3.75rem;
+    position: relative;
+    z-index: 1;
+    img {
+      width: 100%;
+      height: 650px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+  }
+  .body__content {
+    background-color: #12161b;
+    margin-top: -32rem;
+    padding-top: 33rem;
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-image: url(../img/workspace/bg-about.png);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      z-index: 0;
+      opacity: 0.18;
+      @include maxSmall {
+        background-size: cover;
+      }
+    }
+    .info__company {
+      .title_sections {
+        p {
+          opacity: 0.8;
+        }
+      }
+      .description_full {
+        p {
+          font-size: 16px;
+          opacity: 0.8;
+          color: $white-color;
+          margin-bottom: 1.25rem;
+        }
+      }
+    }
+
+    .item__counter {
+      h4 {
+        font-size: 50px;
+        color: $white-color;
+        font-weight: 700;
+        margin-bottom: 1.25rem;
+      }
+      p {
+        font-size: 20px;
+        font-weight: 400;
+        color: $white-color;
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  about_cc_grid
+-----------------------------*/
+.about_cc_grid {
+  .group_img {
+    img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+      &:first-child {
+        width: 276px;
+        height: 387px;
+        margin-bottom: 1.875rem;
+        @include maxSmall {
+          width: 100%;
+        }
+      }
+      &:nth-child(2) {
+        width: 100%;
+        height: 284px;
+      }
+    }
+  }
+  .group_img_two {
+    @include maxSmall {
+      margin-top: 1.875rem;
+    }
+    img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+      &:first-child {
+        width: 343px;
+        height: 262px;
+        margin-bottom: 1.875rem;
+        @include maxSmall {
+          width: 100%;
+        }
+      }
+      &:nth-child(2) {
+        width: 100%;
+        height: 409px;
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  our_story
+-----------------------------*/
+.our_story {
+  .image_grid {
+    img {
+      border-radius: 12px;
+      object-fit: cover;
+      height: 500px;
+      width: 100%;
+    }
+    .img_one {
+      height: 500px;
+      width: 100%;
+      margin-bottom: 60px;
+    }
+    .before_line {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='306' height='193' viewBox='0 0 306 193'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect width='306' height='193' fill='none'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='Repeat_Grid_6' data-name='Repeat Grid 6' clip-path='url(%23clip-path)'%3E%3Cg id='Group_5688' data-name='Group 5688' transform='translate(-997 -476)'%3E%3Ccircle id='Ellipse_180' data-name='Ellipse 180' cx='3' cy='3' r='3' transform='translate(997 476)' fill='rgba(41,2,114,0.15)'/%3E%3Cg id='Ellipse_181' data-name='Ellipse 181' transform='translate(1033 476)' fill='none' stroke='rgba(41,2,114,0.4)' stroke-width='1'%3E%3Ccircle cx='3' cy='3' r='3' stroke='none'/%3E%3Ccircle cx='3' cy='3' r='2.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='Group_5688-2' data-name='Group 5688' transform='translate(-927 -476)'%3E%3Ccircle id='Ellipse_180-2' data-name='Ellipse 180' cx='3' cy='3' r='3' transform='translate(997 476)' fill='rgba(41,2,114,0.15)'/%3E%3Cg id='Ellipse_181-2' data-name='Ellipse 181' transform='translate(1033 476)' fill='none' stroke='rgba(41,2,114,0.4)' stroke-width='1'%3E%3Ccircle cx='3' cy='3' r='3' stroke='none'/%3E%3Ccircle cx='3' cy='3' r='2.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='Group_5688-3' data-name='Group 5688' transform='translate(-857 -476)'%3E%3Ccircle id='Ellipse_180-3' data-name='Ellipse 180' cx='3' cy='3' r='3' transform='translate(997 476)' fill='rgba(41,2,114,0.15)'/%3E%3Cg id='Ellipse_181-3' data-name='Ellipse 181' transform='translate(1033 476)' fill='none' stroke='rgba(41,2,114,0.4)' stroke-width='1'%3E%3Ccircle cx='3' cy='3' r='3' stroke='none'/%3E%3Ccircle cx='3' cy='3' r='2.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='Group_5688-4' data-name='Group 5688' transform='translate(-787 -476)'%3E%3Ccircle id='Ellipse_180-4' data-name='Ellipse 180' cx='3' cy='3' r='3' transform='translate(997 476)' fill='rgba(41,2,114,0.15)'/%3E%3Cg id='Ellipse_181-4' data-name='Ellipse 181' transform='translate(1033 476)' fill='none' stroke='rgba(41,2,114,0.4)' stroke-width='1'%3E%3Ccircle cx='3' cy='3' r='3' stroke='none'/%3E%3Ccircle cx='3' cy='3' r='2.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='Group_5688-5' data-name='Group 5688' transform='translate(-717 -476)'%3E%3Ccircle id='Ellipse_180-5' data-name='Ellipse 180' cx='3' cy='3' r='3' transform='translate(997 476)' fill='rgba(41,2,114,0.15)'/%3E%3Cg id='Ellipse_181-5' data-name='Ellipse 181' transform='translate(1033 476)' fill='none' stroke='rgba(41,2,114,0.4)' stroke-width='1'%3E%3Ccircle cx='3' cy='3' r='3' stroke='none'/%3E%3Ccircle cx='3' cy='3' r='2.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='Group_5688-6' data-name='Group 5688' transform='translate(-997 -430)'%3E%3Ccircle id='Ellipse_180-6' data-name='Ellipse 180' cx='3' cy='3' r='3' transform='translate(997 476)' fill='rgba(41,2,114,0.15)'/%3E%3Cg id='Ellipse_181-6' data-name='Ellipse 181' transform='translate(1033 476)' fill='none' stroke='rgba(41,2,114,0.4)' stroke-width='1'%3E%3Ccircle cx='3' cy='3' r='3' stroke='none'/%3E%3Ccircle cx='3' cy='3' r='2.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='Group_5688-7' data-name='Group 5688' transform='translate(-927 -430)'%3E%3Ccircle id='Ellipse_180-7' data-name='Ellipse 180' cx='3' cy='3' r='3' transform='translate(997 476)' fill='rgba(41,2,114,0.15)'/%3E%3Cg id='Ellipse_181-7' data-name='Ellipse 181' transform='translate(1033 476)' fill='none' stroke='rgba(41,2,114,0.4)' stroke-width='1'%3E%3Ccircle cx='3' cy='3' r='3' stroke='none'/%3E%3Ccircle cx='3' cy='3' r='2.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='Group_5688-8' data-name='Group 5688' transform='translate(-857 -430)'%3E%3Ccircle id='Ellipse_180-8' data-name='Ellipse 180' cx='3' cy='3' r='3' transform='translate(997 476)' fill='rgba(41,2,114,0.15)'/%3E%3Cg id='Ellipse_181-8' data-name='Ellipse 181' transform='translate(1033 476)' fill='none' stroke='rgba(41,2,114,0.4)' stroke-width='1'%3E%3Ccircle cx='3' cy='3' r='3' stroke='none'/%3E%3Ccircle cx='3' cy='3' r='2.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='Group_5688-9' data-name='Group 5688' transform='translate(-787 -430)'%3E%3Ccircle id='Ellipse_180-9' data-name='Ellipse 180' cx='3' cy='3' r='3' transform='translate(997 476)' fill='rgba(41,2,114,0.15)'/%3E%3Cg id='Ellipse_181-9' data-name='Ellipse 181' transform='translate(1033 476)' fill='none' stroke='rgba(41,2,114,0.4)' stroke-width='1'%3E%3Ccircle cx='3' cy='3' r='3' stroke='none'/%3E%3Ccircle cx='3' cy='3' r='2.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='Group_5688-10' data-name='Group 5688' transform='translate(-717 -430)'%3E%3Ccircle id='Ellipse_180-10' data-name='Ellipse 180' cx='3' cy='3' r='3' transform='translate(997 476)' fill='rgba(41,2,114,0.15)'/%3E%3Cg id='Ellipse_181-10' data-name='Ellipse 181' transform='translate(1033 476)' fill='none' stroke='rgba(41,2,114,0.4)' stroke-width='1'%3E%3Ccircle cx='3' cy='3' r='3' stroke='none'/%3E%3Ccircle cx='3' cy='3' r='2.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='Group_5688-11' data-name='Group 5688' transform='translate(-997 -384)'%3E%3Ccircle id='Ellipse_180-11' data-name='Ellipse 180' cx='3' cy='3' r='3' transform='translate(997 476)' fill='rgba(41,2,114,0.15)'/%3E%3Cg id='Ellipse_181-11' data-name='Ellipse 181' transform='translate(1033 476)' fill='none' stroke='rgba(41,2,114,0.4)' stroke-width='1'%3E%3Ccircle cx='3' cy='3' r='3' stroke='none'/%3E%3Ccircle cx='3' cy='3' r='2.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='Group_5688-12' data-name='Group 5688' transform='translate(-927 -384)'%3E%3Ccircle id='Ellipse_180-12' data-name='Ellipse 180' cx='3' cy='3' r='3' transform='translate(997 476)' fill='rgba(41,2,114,0.15)'/%3E%3Cg id='Ellipse_181-12' data-name='Ellipse 181' transform='translate(1033 476)' fill='none' stroke='rgba(41,2,114,0.4)' stroke-width='1'%3E%3Ccircle cx='3' cy='3' r='3' stroke='none'/%3E%3Ccircle cx='3' cy='3' r='2.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='Group_5688-13' data-name='Group 5688' transform='translate(-857 -384)'%3E%3Ccircle id='Ellipse_180-13' data-name='Ellipse 180' cx='3' cy='3' r='3' transform='translate(997 476)' fill='rgba(41,2,114,0.15)'/%3E%3Cg id='Ellipse_181-13' data-name='Ellipse 181' transform='translate(1033 476)' fill='none' stroke='rgba(41,2,114,0.4)' stroke-width='1'%3E%3Ccircle cx='3' cy='3' r='3' stroke='none'/%3E%3Ccircle cx='3' cy='3' r='2.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='Group_5688-14' data-name='Group 5688' transform='translate(-787 -384)'%3E%3Ccircle id='Ellipse_180-14' data-name='Ellipse 180' cx='3' cy='3' r='3' transform='translate(997 476)' fill='rgba(41,2,114,0.15)'/%3E%3Cg id='Ellipse_181-14' data-name='Ellipse 181' transform='translate(1033 476)' fill='none' stroke='rgba(41,2,114,0.4)' stroke-width='1'%3E%3Ccircle cx='3' cy='3' r='3' stroke='none'/%3E%3Ccircle cx='3' cy='3' r='2.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='Group_5688-15' data-name='Group 5688' transform='translate(-717 -384)'%3E%3Ccircle id='Ellipse_180-15' data-name='Ellipse 180' cx='3' cy='3' r='3' transform='translate(997 476)' fill='rgba(41,2,114,0.15)'/%3E%3Cg id='Ellipse_181-15' data-name='Ellipse 181' transform='translate(1033 476)' fill='none' stroke='rgba(41,2,114,0.4)' stroke-width='1'%3E%3Ccircle cx='3' cy='3' r='3' stroke='none'/%3E%3Ccircle cx='3' cy='3' r='2.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='Group_5688-16' data-name='Group 5688' transform='translate(-997 -338)'%3E%3Ccircle id='Ellipse_180-16' data-name='Ellipse 180' cx='3' cy='3' r='3' transform='translate(997 476)' fill='rgba(41,2,114,0.15)'/%3E%3Cg id='Ellipse_181-16' data-name='Ellipse 181' transform='translate(1033 476)' fill='none' stroke='rgba(41,2,114,0.4)' stroke-width='1'%3E%3Ccircle cx='3' cy='3' r='3' stroke='none'/%3E%3Ccircle cx='3' cy='3' r='2.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='Group_5688-17' data-name='Group 5688' transform='translate(-927 -338)'%3E%3Ccircle id='Ellipse_180-17' data-name='Ellipse 180' cx='3' cy='3' r='3' transform='translate(997 476)' fill='rgba(41,2,114,0.15)'/%3E%3Cg id='Ellipse_181-17' data-name='Ellipse 181' transform='translate(1033 476)' fill='none' stroke='rgba(41,2,114,0.4)' stroke-width='1'%3E%3Ccircle cx='3' cy='3' r='3' stroke='none'/%3E%3Ccircle cx='3' cy='3' r='2.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='Group_5688-18' data-name='Group 5688' transform='translate(-857 -338)'%3E%3Ccircle id='Ellipse_180-18' data-name='Ellipse 180' cx='3' cy='3' r='3' transform='translate(997 476)' fill='rgba(41,2,114,0.15)'/%3E%3Cg id='Ellipse_181-18' data-name='Ellipse 181' transform='translate(1033 476)' fill='none' stroke='rgba(41,2,114,0.4)' stroke-width='1'%3E%3Ccircle cx='3' cy='3' r='3' stroke='none'/%3E%3Ccircle cx='3' cy='3' r='2.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='Group_5688-19' data-name='Group 5688' transform='translate(-787 -338)'%3E%3Ccircle id='Ellipse_180-19' data-name='Ellipse 180' cx='3' cy='3' r='3' transform='translate(997 476)' fill='rgba(41,2,114,0.15)'/%3E%3Cg id='Ellipse_181-19' data-name='Ellipse 181' transform='translate(1033 476)' fill='none' stroke='rgba(41,2,114,0.4)' stroke-width='1'%3E%3Ccircle cx='3' cy='3' r='3' stroke='none'/%3E%3Ccircle cx='3' cy='3' r='2.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='Group_5688-20' data-name='Group 5688' transform='translate(-717 -338)'%3E%3Ccircle id='Ellipse_180-20' data-name='Ellipse 180' cx='3' cy='3' r='3' transform='translate(997 476)' fill='rgba(41,2,114,0.15)'/%3E%3Cg id='Ellipse_181-20' data-name='Ellipse 181' transform='translate(1033 476)' fill='none' stroke='rgba(41,2,114,0.4)' stroke-width='1'%3E%3Ccircle cx='3' cy='3' r='3' stroke='none'/%3E%3Ccircle cx='3' cy='3' r='2.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='Group_5688-21' data-name='Group 5688' transform='translate(-997 -292)'%3E%3Ccircle id='Ellipse_180-21' data-name='Ellipse 180' cx='3' cy='3' r='3' transform='translate(997 476)' fill='rgba(41,2,114,0.15)'/%3E%3Cg id='Ellipse_181-21' data-name='Ellipse 181' transform='translate(1033 476)' fill='none' stroke='rgba(41,2,114,0.4)' stroke-width='1'%3E%3Ccircle cx='3' cy='3' r='3' stroke='none'/%3E%3Ccircle cx='3' cy='3' r='2.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='Group_5688-22' data-name='Group 5688' transform='translate(-927 -292)'%3E%3Ccircle id='Ellipse_180-22' data-name='Ellipse 180' cx='3' cy='3' r='3' transform='translate(997 476)' fill='rgba(41,2,114,0.15)'/%3E%3Cg id='Ellipse_181-22' data-name='Ellipse 181' transform='translate(1033 476)' fill='none' stroke='rgba(41,2,114,0.4)' stroke-width='1'%3E%3Ccircle cx='3' cy='3' r='3' stroke='none'/%3E%3Ccircle cx='3' cy='3' r='2.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='Group_5688-23' data-name='Group 5688' transform='translate(-857 -292)'%3E%3Ccircle id='Ellipse_180-23' data-name='Ellipse 180' cx='3' cy='3' r='3' transform='translate(997 476)' fill='rgba(41,2,114,0.15)'/%3E%3Cg id='Ellipse_181-23' data-name='Ellipse 181' transform='translate(1033 476)' fill='none' stroke='rgba(41,2,114,0.4)' stroke-width='1'%3E%3Ccircle cx='3' cy='3' r='3' stroke='none'/%3E%3Ccircle cx='3' cy='3' r='2.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='Group_5688-24' data-name='Group 5688' transform='translate(-787 -292)'%3E%3Ccircle id='Ellipse_180-24' data-name='Ellipse 180' cx='3' cy='3' r='3' transform='translate(997 476)' fill='rgba(41,2,114,0.15)'/%3E%3Cg id='Ellipse_181-24' data-name='Ellipse 181' transform='translate(1033 476)' fill='none' stroke='rgba(41,2,114,0.4)' stroke-width='1'%3E%3Ccircle cx='3' cy='3' r='3' stroke='none'/%3E%3Ccircle cx='3' cy='3' r='2.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3Cg id='Group_5688-25' data-name='Group 5688' transform='translate(-717 -292)'%3E%3Ccircle id='Ellipse_180-25' data-name='Ellipse 180' cx='3' cy='3' r='3' transform='translate(997 476)' fill='rgba(41,2,114,0.15)'/%3E%3Cg id='Ellipse_181-25' data-name='Ellipse 181' transform='translate(1033 476)' fill='none' stroke='rgba(41,2,114,0.4)' stroke-width='1'%3E%3Ccircle cx='3' cy='3' r='3' stroke='none'/%3E%3Ccircle cx='3' cy='3' r='2.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        width: 306px;
+        height: 190px;
+        left: -100px;
+        top: -130px;
+        z-index: -1;
+      }
+    }
+    .img_two {
+      height: 600px;
+      margin-top: -100px;
+      @include maxSmall {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  about_inner_two
+-----------------------------*/
+.about_inner_two {
+  position: relative;
+  overflow: hidden;
+  .image_group {
+    margin-left: -220px;
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 615px;
+    }
+  }
+  .image_group_oo {
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 615px;
+    }
+  }
+  .faq_with_icon {
+    .accordion {
+      .card {
+        border-radius: 4px;
+      }
+      .card-header {
+        border-radius: 4px;
+        background-color: transparent;
+        @include prefixer(transition, 0.3s, webkit moz o ms);
+        &.active {
+          background-color: $bg-color;
+        }
+      }
+      .card-body {
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  about_developer
+-----------------------------*/
+.about_developer {
+  .image_about_dev {
+    img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+    }
+  }
+}

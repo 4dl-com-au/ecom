@@ -1,0 +1,213 @@
+/*
+    CSS Table of Sections
+    --------------------------
+    ** serction__mapch
+    --------------------------
+    **map_image_info
+    --------------------------
+
+*/
+
+/*-----------------------------
+  serction__mapch
+-----------------------------*/
+.serction__mapch {
+  background: linear-gradient(#ffffff, #f9f9f9);
+  width: 93%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 20px;
+  @include maxSmall {
+    width: 100%;
+  }
+  .title_sections {
+    margin-bottom: 3.125rem;
+  }
+  .content__map {
+    position: relative;
+    .bg_pin {
+      position: absolute;
+      z-index: 2;
+      width: 11px;
+      height: 11px;
+      background-color: rgba($red-color, 0.85);
+      border-radius: 100px;
+      display: block;
+      &::before {
+        content: "";
+        position: absolute;
+        background: $red-color;
+        border-radius: 50%;
+        display: block;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0.25;
+        top: 0;
+        left: 0;
+        @include prefixer(
+          animation,
+          ripple-map 1.3s infinite cubic-bezier(0.29, -0.01, 0.17, 0.95),
+          webkit moz o ms
+        );
+      }
+      &:nth-of-type(1) {
+        top: 6%;
+        right: 30%;
+      }
+      &:nth-of-type(2) {
+        top: 17%;
+        left: 28%;
+        &::before {
+          @include prefixer(
+            animation,
+            ripple-map 1.5s infinite cubic-bezier(0.29, -0.01, 0.17, 0.95),
+            webkit moz o ms
+          );
+        }
+      }
+      &:nth-of-type(3) {
+        top: 30%;
+        left: 56%;
+        &::before {
+          @include prefixer(
+            animation,
+            ripple-map 1.8s infinite cubic-bezier(0.29, -0.01, 0.17, 0.95),
+            webkit moz o ms
+          );
+        }
+      }
+      &:nth-of-type(4) {
+        top: 60%;
+        right: 26%;
+        &::before {
+          @include prefixer(
+            animation,
+            ripple-map 1.5s infinite cubic-bezier(0.29, -0.01, 0.17, 0.95),
+            webkit moz o ms
+          );
+        }
+      }
+      &:nth-of-type(5) {
+        top: 47%;
+        left: 41%;
+        &::before {
+          @include prefixer(
+            animation,
+            ripple-map 1.8s infinite cubic-bezier(0.29, -0.01, 0.17, 0.95),
+            webkit moz o ms
+          );
+        }
+      }
+      &:nth-of-type(6) {
+        top: 62%;
+        left: 47%;
+        &::before {
+          @include prefixer(
+            animation,
+            ripple-map 1.5s infinite cubic-bezier(0.29, -0.01, 0.17, 0.95),
+            webkit moz o ms
+          );
+        }
+      }
+      &:nth-of-type(7) {
+        top: 55%;
+        left: 26%;
+        &::before {
+          @include prefixer(
+            animation,
+            ripple-map 1.8s infinite cubic-bezier(0.29, -0.01, 0.17, 0.95),
+            webkit moz o ms
+          );
+        }
+      }
+      &:nth-of-type(8) {
+        top: 70%;
+        left: 35%;
+        &::before {
+          @include prefixer(
+            animation,
+            ripple-map 1.5s infinite cubic-bezier(0.29, -0.01, 0.17, 0.95),
+            webkit moz o ms
+          );
+        }
+      }
+      &:nth-of-type(9) {
+        top: 90%;
+        left: 25%;
+        &::before {
+          @include prefixer(
+            animation,
+            ripple-map 1.8s infinite cubic-bezier(0.29, -0.01, 0.17, 0.95),
+            webkit moz o ms
+          );
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  map_image_info
+-----------------------------*/
+
+.map_image_info {
+  background-color: $white-color;
+  padding-bottom: 200px;
+  .google_map {
+    position: relative;
+    img,
+    iframe {
+      height: 500px;
+      width: 100%;
+      object-fit: cover;
+    }
+    .pin_map {
+      width: 10px;
+      height: 10px;
+      background-color: $blue-color;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      top: 30%;
+      left: 40%;
+    }
+  }
+  .image_team {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 4;
+    img {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      object-fit: cover;
+      height: 650px;
+    }
+  }
+  .block_loaction {
+    position: absolute;
+    left: 50px;
+    top: -190px;
+    z-index: 4;
+    @include maxMobile {
+      left: 0;
+    }
+    .item_locat {
+      @include prefixer(
+        box-shadow,
+        0px 40px 30px 0px rgba(11, 34, 56, 0.04),
+        webkit moz o ms
+      );
+      svg {
+        path {
+          fill: $blue-color;
+        }
+      }
+    }
+  }
+}

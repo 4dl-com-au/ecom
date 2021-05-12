@@ -1,0 +1,752 @@
+/*
+    CSS Table of Sections
+    --------------------------
+    ** Conact Sass Products
+    --------------------------
+    ** try it
+    --------------------------
+    ** connect_us
+    --------------------------
+    ** gbo_contact
+    --------------------------
+    ** need_help_sec
+    --------------------------
+    ** help__ch
+    --------------------------
+    ** contact__workspace
+    --------------------------
+    ** sec__office_location
+    --------------------------
+    **banner_cotact_three
+    --------------------------
+    **section_contact_five
+    --------------------------
+    **contact_six
+    --------------------------
+    **creative_box_contact
+    --------------------------
+    
+    
+
+*/
+
+/*-----------------------------
+  Conact Sass Products
+-----------------------------*/
+.simplecontact_section {
+  position: relative;
+  overflow: hidden;
+  .circle-ripple {
+    position: absolute;
+    left: 43.5%;
+    top: 20%;
+    z-index: -1;
+    pointer-events: none;
+    @include maxSmall {
+      left: 39.5%;
+    }
+    @include maxMobile {
+      left: 23.5%;
+    }
+    .ripple {
+      position: absolute;
+      border: 3px solid $border-color;
+      width: 200px;
+      height: 200px;
+      border-radius: 500px;
+    }
+    .ripple-1 {
+      @include prefixer(
+        animation,
+        circleRipple 3s infinite linear,
+        webkit moz o ms
+      );
+    }
+    .ripple-2 {
+      @include prefixer(
+        animation,
+        circleRipple 3s infinite linear 0.75s,
+        webkit moz o ms
+      );
+    }
+    .ripple-3 {
+      @include prefixer(
+        animation,
+        circleRipple 3s infinite linear 1.5s,
+        webkit moz o ms
+      );
+    }
+  }
+}
+
+/*-----------------------------
+  Try it
+-----------------------------*/
+.tryit_now {
+  background-color: #381840;
+  position: relative;
+  overflow: hidden;
+  margin-top: -6rem;
+  .title_sections {
+    p {
+      color: rgba($white-color, 0.5);
+      margin-bottom: 0;
+    }
+  }
+  &:before {
+    content: "";
+    background-image: url("../img/shpaeboxes.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    height: 100%;
+    width: 100%;
+    background-size: 50%;
+    @include maxMobile {
+      background-size: cover;
+    }
+  }
+}
+
+/*-----------------------------
+  connect_us
+-----------------------------*/
+.connect_us {
+  background-color: rgba(#381840, 0.05);
+  margin-top: 5rem;
+  .title_sections {
+    margin-bottom: 0;
+  }
+  .ripple {
+    &:active,
+    &:focus {
+      &:before {
+        background: $orange-red-color;
+        border-radius: 8px;
+        content: "";
+        display: block;
+        height: 100%;
+        opacity: 0.25;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        animation: ripple 1s cubic-bezier(0.29, -0.01, 0.17, 0.95);
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  contact_section
+-----------------------------*/
+.contact_section {
+  position: relative;
+  margin-top: 15rem;
+  @include maxMobile {
+    margin-top: 6.25rem;
+  }
+  img {
+    position: absolute;
+    top: -40%;
+    z-index: -1;
+    @include maxMobile {
+      top: -20%;
+    }
+  }
+  .dark-form {
+    .form-control {
+      background-color: rgba($white-color, 0.05);
+      border: 0;
+      color: $white-color !important;
+      &::placeholder {
+        color: $currency-p-color;
+      }
+    }
+    textarea {
+      padding: 1.25rem;
+      &:focus,
+      &:active {
+        outline: 0;
+        @include prefixer(box-shadow, none, webkit moz o ms);
+      }
+    }
+  }
+  .custom-control {
+    margin-bottom: 0.5rem;
+    .custom-control-input {
+      border: 0;
+      &:checked {
+        ~ .custom-control-label {
+          &::before {
+            background-color: $magenta-color;
+            border: 0;
+            @include prefixer(
+              box-shadow,
+              0px 0px 20px 0px rgba(253, 79, 254, 0.4),
+              webkit moz o ms
+            );
+          }
+        }
+      }
+    }
+    .custom-control-label {
+      color: $white-color;
+      font-size: 13px;
+      &::before {
+        top: 0.1rem;
+      }
+      &::after {
+        top: 0.1rem;
+      }
+    }
+  }
+  .button--click {
+    .btn-token {
+      width: 100%;
+      margin: 0;
+      padding: 1.15rem;
+    }
+  }
+}
+
+/*-----------------------------
+  gbo_contact
+-----------------------------*/
+.gbo_contact {
+  background-image: url("../img/0987.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+  position: relative;
+  background-position: 50% 59%;
+  padding: 6.25rem 0;
+  margin-top: 1.85rem;
+  width: 96%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+  @include maxMobile {
+    margin-top: 0.5rem;
+  }
+  .overlay {
+    @include overlay;
+    background-color: rgba($dark-color, 0.3);
+    border-radius: 12px;
+  }
+}
+
+/*-----------------------------
+  need_help
+-----------------------------*/
+.need_help_sec {
+  .block_help {
+    position: relative;
+    overflow: hidden;
+    background-color: #040309;
+    border-radius: 12px;
+    padding: 3rem;
+    z-index: 1;
+    &:before {
+      content: "";
+      background-image: url("../img/hosting/light.png");
+      background-repeat: no-repeat;
+      background-size: 140%;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      opacity: 0.14;
+      height: 100%;
+      width: 100%;
+      background-position: 98% 96%;
+      z-index: -1;
+      @include maxMobile {
+        background-size: 180%;
+      }
+    }
+  }
+  .item_help {
+    margin-top: 2rem;
+    span {
+      font-size: 14px;
+      font-weight: 500;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+  }
+  .img_help {
+    width: 300px;
+    display: flex;
+    margin: auto;
+  }
+}
+
+/*-----------------------------
+  help__ch
+-----------------------------*/
+.help__ch {
+  position: relative;
+  .title_sections {
+    margin-bottom: 2.5rem;
+  }
+  .button__super {
+    .btn {
+      width: 140px;
+      margin: 0 0.625rem;
+    }
+  }
+  .back__img {
+    pointer-events: none;
+    @include maxMobile {
+      display: none;
+    }
+    .part__1 {
+      position: absolute;
+      left: -70%;
+      top: -20%;
+      z-index: -1;
+    }
+    .part__2 {
+      position: absolute;
+      top: 40%;
+      right: -24%;
+      z-index: -1;
+    }
+  }
+}
+/*-----------------------------
+  contact__workspace
+-----------------------------*/
+
+.contact__workspace {
+  background-color: #12161b;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/workspace/bg-about.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 50% 50%;
+    opacity: 0.25;
+  }
+  .btn {
+    background-color: $white-color;
+    color: $dark-color;
+    &::before {
+      background: $orange-red-color;
+      color: $white-color;
+    }
+  }
+}
+
+/*-----------------------------
+  sec__office_location
+-----------------------------*/
+.office_location_icon {
+  .item_off {
+    img,
+    svg {
+      margin-bottom: 1.875rem;
+      display: inline-block;
+      text-align: center;
+    }
+    .body_info {
+      h3 {
+        font-size: 20px;
+        font-weight: 500;
+        color: $dark-color;
+        margin-bottom: 12px;
+      }
+      p {
+        color: $gray-color;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 12px;
+      }
+      .other_i {
+        color: $gray-color;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.bg_light_inner {
+  background-color: rgba($dark-color, 0.02);
+}
+
+/*-----------------------------
+  banner_cotact_three
+-----------------------------*/
+.contact_inner_three {
+  background-color: #240041;
+}
+.banner_cotact_three {
+  padding-bottom: 0;
+  overflow: hidden;
+  .shape_circle {
+    @include maxMobile {
+      display: none;
+    }
+    div {
+      position: absolute;
+      &:first-child {
+        display: block;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background-color: #ff8260;
+        z-index: 0;
+        bottom: 6%;
+        right: 8.5%;
+      }
+      &:last-child {
+        display: block;
+        width: 175px;
+        height: 175px;
+        border-radius: 50%;
+        background-color: rgba(#900048, 0.95);
+        z-index: 1;
+        bottom: 28%;
+        right: 33%;
+      }
+    }
+  }
+  .information_content {
+    .link_item {
+      padding: 1.25rem 1.875rem;
+      border-radius: 8px;
+      margin-bottom: 1.25rem;
+      a,
+      p {
+        display: block;
+        margin-bottom: 0;
+        color: $white-color;
+        .tio {
+          margin-right: 0.938rem;
+          font-size: 22px;
+          vertical-align: middle;
+          display: inline-block;
+        }
+      }
+      &.selecr_mark {
+        border: 2px solid#FF4057;
+        background-color: rgba(#ff4057, 0.03);
+      }
+    }
+  }
+  .cc_socialmedia {
+    margin-top: 6.25rem;
+    margin-bottom: 1.875rem;
+    a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      font-size: 20px;
+      color: $white-color;
+      background-color: transparent;
+      @include prefixer(transition, 0.4s, webkit moz o ms);
+      &:hover {
+        background-color: #ff4057;
+      }
+      &:nth-child(2) {
+        background-color: #ff4057;
+      }
+    }
+    &:hover {
+      a {
+        &:nth-child(2) {
+          background-color: transparent;
+          &:hover {
+            background-color: #ff4057;
+          }
+        }
+      }
+    }
+  }
+  .form_contact_two {
+    background-color: $white-color;
+    border-radius: 8px;
+    padding: 1.563rem;
+    position: relative;
+    z-index: 2;
+    @include maxMobile {
+      margin-bottom: 2.5rem;
+    }
+    .input_group {
+      position: relative;
+      input {
+        padding-left: 3.125rem;
+      }
+      .tio {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: rgba($gray-color, 0.8);
+        font-size: 18px;
+      }
+    }
+    .btn_send {
+      background-color: #ff4057;
+      color: $white-color;
+    }
+  }
+}
+
+/*-----------------------------
+  form_cc_four
+-----------------------------*/
+.section_contact_four {
+  margin-top: -18.5rem;
+}
+
+.form_cc_four {
+  background-color: $white-color;
+  border-radius: 8px;
+  padding: 2.5rem;
+  @include prefixer(
+    box-shadow,
+    0px 50px 70px -10px rgba(11, 34, 56, 0.05),
+    webkit moz o ms
+  );
+  .item_upload {
+    @include minMedium {
+      display: flex;
+    }
+    span {
+      font-size: 13px;
+      color: $gray-color;
+      @include maxMobile {
+        display: block;
+      }
+    }
+  }
+  .upload__file {
+    position: relative;
+    overflow: hidden;
+    margin-right: 15px;
+    @include prefixer(transition, 0.3s, webkit moz o ms);
+    input[type="file"] {
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      left: -160px;
+      font-size: 40px;
+      cursor: pointer;
+    }
+    .btn {
+      border-radius: 8px;
+      border: 1px dashed #dce0e3;
+      .tio {
+        vertical-align: middle;
+        color: $blue-color;
+        font-size: 18px;
+        margin-right: 4px;
+      }
+    }
+    &:hover {
+      background-color: $bg-color;
+    }
+  }
+}
+
+/*-----------------------------
+  section_contact_five
+-----------------------------*/
+.section_contact_five {
+  @include prefixer(
+    box-shadow,
+    0px -200px 60px -200px rgba(11, 34, 56, 0.04),
+    webkit moz o ms
+  );
+  .form_cc_four {
+    box-shadow: none !important;
+    padding: 0;
+  }
+  &.no-shadow {
+    @include prefixer(box-shadow, none, webkit moz o ms);
+  }
+}
+
+/*-----------------------------
+  with_map_office
+-----------------------------*/
+.with_map_office {
+  background-color: rgba($dark-color, 0.02);
+  .block_loaction {
+    padding: 0 0.938rem;
+    .title {
+      font-size: 20px;
+      font-weight: 500;
+      color: $dark-color;
+      margin: 1.875rem;
+    }
+    .item_locat {
+      background-color: $white-color;
+      border-radius: 8px;
+      padding: 1.875rem;
+      .add_ress {
+        color: $gray-color;
+        font-size: 16px;
+        margin-bottom: 4.375rem;
+      }
+      svg {
+        margin-bottom: 1.875rem;
+      }
+      .availability {
+        margin-bottom: 1.25rem;
+        span {
+          display: block;
+          color: rgba($gray-color, 0.7);
+          font-size: 14px;
+          margin-bottom: 8px;
+        }
+        p,
+        a {
+          display: block;
+          font-size: 15px;
+          color: $dark-color;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .block_map_locat {
+    position: relative;
+    @include maxSmall {
+      margin-bottom: 8.75rem;
+    }
+    .google_map {
+      margin-top: -2.5rem;
+      iframe {
+        height: 366px;
+        width: 100%;
+      }
+    }
+    .block_loaction {
+      position: absolute;
+      top: 100px;
+      padding: 0 1.25rem;
+
+      .item_locat {
+        .add_ress {
+          margin-bottom: 3.75rem;
+        }
+        @include prefixer(
+          box-shadow,
+          0px 20px 35px 0px rgba(11, 34, 56, 0.02),
+          webkit moz o ms
+        );
+      }
+    }
+    h3 {
+      font-size: 20px;
+      font-weight: 500;
+      color: $dark-color;
+      margin-bottom: 0.938rem;
+    }
+  }
+}
+
+/*-----------------------------
+  contact_six
+-----------------------------*/
+.contact_six {
+  box-shadow: none !important;
+  .information_agency {
+    .item_data {
+      p {
+        margin-bottom: 0.313rem;
+        color: $gray-color;
+        font-size: 14px;
+      }
+      .tel {
+        color: $dark-color;
+        font-size: 16px;
+        font-weight: 500;
+        display: block;
+        @include prefixer(transition, 0.3s, webkit moz o ms);
+        &:hover {
+          color: $red-color;
+        }
+      }
+    }
+  }
+  .scoail__media {
+    margin-top: 40px;
+    a {
+      display: inline-flex;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      background-color: $bg-color;
+      margin-right: 10px;
+      @include prefixer(transition, 0.3s, webkit moz o ms);
+      .tio {
+        font-size: 18px;
+        color: $dark-color;
+        @include prefixer(transition, 0.3s, webkit moz o ms);
+      }
+      &:hover {
+        background-color: $red-color;
+        .tio {
+          color: $white-color;
+        }
+      }
+    }
+  }
+  .form_cc_four {
+    .form-control {
+      background-color: $bg-color;
+      border-color: transparent;
+      &:focus {
+        border-color: $border-color;
+        background-color: $white-color;
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  creative_box_contact
+-----------------------------*/
+.creative_box_contact {
+  background-color: $white-color;
+  .content {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #001638;
+    padding: 5rem 0;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../img/inner/line-cc.svg");
+      background-repeat: no-repeat;
+      background-position-x: -430px;
+      background-position-y: -190px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-size: 100%;
+    }
+  }
+}

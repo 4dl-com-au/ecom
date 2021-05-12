@@ -1,0 +1,16 @@
+/*-----------------------------
+  logos_section
+-----------------------------*/
+.tooltip {
+  .arrow {
+    display: none;
+  }
+  .tooltip-inner {
+    background-color: $dark-color;
+    border-radius: 5px;
+    box-shadow: 0;
+    outline: 0;
+    border: 0;
+    color: $white-color;
+  }
+}

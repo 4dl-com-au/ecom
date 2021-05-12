@@ -1,0 +1,140 @@
+/*----------------------------------------------------
+@File: Default Styles
+@Author: Hasan Sibakhi
+@URL: https://themeforest.net/user/orinostu
+
+This file contains the styling for the actual template, this
+is the file you need to edit to change the look of the
+template.
+---------------------------------------------------- */
+/*=====================================================================
+@Template Name: Rakon Landing Page
+@Author: Hasan Sibakhi
+@Developed By: Hasan Sibakhi
+@Developer URL: https://dribbble.com/HasanSib
+/*===================================================================== */
+
+/*
+    CSS Table of Sections
+    --------------------------
+    ** header
+    --------------------------
+    ** Banner
+    --------------------------
+    ** Services
+    --------------------------
+    ** Features
+    --------------------------
+    ** Products
+    --------------------------
+    ** Horizontalscroll
+    --------------------------
+    ** Pricing
+    --------------------------
+    ** Faq
+    --------------------------
+    ** Contact
+    --------------------------
+    ** Testimonial
+    --------------------------
+    ** Account
+    --------------------------
+    ** About
+    --------------------------
+    ** Tabs
+    --------------------------
+    ** Crypto
+    --------------------------
+    ** Team Members
+    --------------------------
+    ** Newsletter
+    --------------------------
+    ** timeline
+    --------------------------
+    ** Contact Area
+    --------------------------
+    ** Donat
+    --------------------------
+    ** Blog
+    --------------------------
+    ** slider
+    --------------------------
+    ** Map
+    --------------------------
+    ** Search
+    --------------------------
+    ** State
+    --------------------------
+    ** Footer
+    --------------------------
+    ** Pagination
+    --------------------------
+    **countdown
+    --------------------------
+    **Alert
+    --------------------------
+    **projects
+    --------------------------  
+*/
+
+/*   =======
+    helpers
+    ========== */
+@import "sass/helpers/variables";
+@import "sass/helpers/mixins";
+/*  ==========
+       pages
+      ========== */
+@import "sass/pages/globalpage";
+/* =========
+   layout (Sections)
+  ========== */
+/*
+      You can edit any section here (Layout)
+    */
+@import "sass/layout/header";
+@import "sass/layout/banner_section";
+@import "sass/layout/logos";
+@import "sass/layout/services";
+@import "sass/layout/features";
+@import "sass/layout/products";
+@import "sass/layout/horizontalscroll";
+@import "sass/layout/pricing";
+@import "sass/layout/faq";
+@import "sass/layout/contact";
+@import "sass/layout/testimonial";
+@import "sass/layout/account";
+@import "sass/layout/about";
+@import "sass/layout/tabs";
+@import "sass/layout/crypto";
+@import "sass/layout/team";
+@import "sass/layout/newsletter";
+@import "sass/layout/timeline";
+@import "sass/layout/donat";
+@import "sass/layout/blog";
+@import "sass/layout/slider";
+@import "sass/layout/map";
+@import "sass/layout/search";
+@import "sass/layout/state";
+@import "sass/layout/other";
+@import "sass/layout/countdown";
+@import "sass/layout/projects";
+
+/*   =========
+            components
+            ========== */
+@import "sass/components/effects";
+@import "sass/components/button";
+@import "sass/components/form";
+@import "sass/components/modal";
+@import "sass/components/tooltip";
+@import "sass/components/toasts";
+@import "sass/components/dropdown";
+@import "sass/components/breadcrumb";
+@import "sass/components/pagination";
+@import "sass/components/alert";
+
+/* =========
+     layout (Footer)
+      ========== */
+@import "sass/layout/footer";

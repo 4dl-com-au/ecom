@@ -1,0 +1,98 @@
+/*-----------------------------
+  pagination default
+-----------------------------*/
+
+.pagination {
+  &.default {
+    .page-item {
+      .page-link {
+        min-width: 45px;
+        height: 45px;
+        border-radius: 8px;
+        border: 1px solid$border-color;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-right: 10px;
+        color: $dark-color;
+        font-size: 16px;
+        @include prefixer(transition, 0.3s, webkit moz o ms);
+        &:hover {
+          color: $white-color;
+          background-color: $lightgreen-color;
+          border-color: $lightgreen-color;
+          .tio {
+            color: $white-color;
+          }
+        }
+        &.active {
+          color: $white-color;
+          background-color: $lightgreen-color;
+          border-color: $lightgreen-color;
+        }
+        &.disabled {
+          margin-left: -10px;
+          margin-right: 0 !important;
+          border: 0 !important;
+          background-color: transparent !important;
+          color: $light-color !important;
+        }
+        &[aria-label] {
+          background-color: $bg-color;
+          border: 0;
+          &:hover {
+            color: $white-color;
+            background-color: $lightgreen-color;
+            border-color: $lightgreen-color;
+          }
+        }
+      }
+      &:nth-child(5) {
+        @include maxMobile {
+          display: none;
+        }
+      }
+      &:nth-child(6) {
+        @include maxMobile {
+          display: none;
+        }
+      }
+    }
+    &.hover-blue {
+      .page-item {
+        .page-link {
+          &.active {
+            background-color: $blue-color;
+            border-color: $blue-color;
+          }
+          &:hover {
+            background-color: $blue-color;
+            border-color: $blue-color;
+          }
+        }
+      }
+    }
+  }
+  &.button_step {
+    .btn {
+      padding: 11px 7px;
+      font-size: 15px;
+      min-width: 110px;
+      border-radius: 8px;
+      margin-right: 20px;
+      @include prefixer(transition, 0.3s, webkit moz o ms);
+      &.btn_prev {
+        border: 1px solid$border-color;
+        color: $gray-color;
+      }
+      &.btn_nxt {
+        background-color: $black-color;
+        color: $white-color;
+        &:hover {
+          background-color: $red-color;
+        }
+      }
+    }
+  }
+}

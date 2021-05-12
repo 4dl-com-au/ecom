@@ -1,0 +1,309 @@
+/*
+    CSS Table of Sections
+    --------------------------
+    ** form_register
+    --------------------------
+    ** section_account
+    --------------------------
+    **signup_full
+    --------------------------
+
+    
+
+*/
+
+/*-----------------------------
+  form_register
+-----------------------------*/
+.form_register {
+  background-color: $white-color;
+  border-radius: 8px;
+  padding: 2.5rem;
+  .title--forms {
+    font-size: 25px;
+    font-weight: 600;
+    color: $dark-color;
+    margin-bottom: 1.5rem;
+  }
+  input {
+    &:focus {
+      border-color: $blue-color;
+    }
+  }
+  .terms {
+    p {
+      color: $gray-color;
+      font-size: 14px;
+      font-weight: 400;
+      a {
+        color: $blue-color;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .btn-primary {
+    padding: 0.75rem 1.9rem;
+  }
+}
+.form-group {
+  &.--password {
+    .input-group {
+      input {
+        padding-right: 3.2rem;
+        border-radius: 6px !important;
+      }
+      .input-group-prepend {
+        .input-group-text {
+          position: absolute;
+          font-size: 19px;
+          color: $light-color;
+          top: 0.75rem;
+          right: 0.75rem;
+          border: 0;
+          background-color: transparent;
+          z-index: 5;
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  section_account
+-----------------------------*/
+.section_account {
+  .fixed_side_data {
+    background: url("../img/signup.png");
+    background-repeat: no-repeat;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 430px;
+    background-size: cover;
+    height: 100vh;
+    padding: 2.5rem;
+    @include maxMobile {
+      position: relative;
+      width: 100%;
+      height: 330px;
+      top: inherit;
+      margin-top: 1rem;
+      border-radius: 8px;
+    }
+    .btn_logo {
+      color: $white-color;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 0;
+      img {
+        vertical-align: bottom;
+        margin-right: 0.3rem;
+      }
+    }
+    .title_nav {
+      font-size: 25px;
+      font-weight: 500;
+      color: $white-color;
+      margin-top: 1.5rem;
+    }
+  }
+  .have_account {
+    color: $dark-color;
+    margin-top: 2rem;
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-end;
+    @include maxMobile {
+      justify-content: flex-start;
+      padding-left: 1rem;
+    }
+    .btn {
+      padding: 0;
+      color: $blue-color;
+      margin-left: 0.3rem;
+      line-height: 0;
+    }
+  }
+  .box--signup {
+    position: relative;
+    height: 100%;
+    padding: 0;
+    overflow: inherit;
+    padding: 2rem 1.5rem;
+    padding-bottom: 0;
+    max-width: 430px;
+    @include maxMobile {
+      display: block;
+      padding: 1rem;
+      width: 100%;
+    }
+  }
+}
+
+/*-----------------------------
+  signup_full
+-----------------------------*/
+.signup_full {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-align: center;
+  align-items: center;
+  background-image: url("../img/inner/01.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .form_signup_one {
+    .item_group {
+      background-color: $white-color;
+      border-radius: 8px;
+      padding: 2.188rem;
+      .title_sign {
+        margin-bottom: 1.875rem;
+        h2 {
+          font-size: 25px;
+          font-weight: 600;
+          color: $dark-color;
+          margin-bottom: 8px;
+        }
+        p {
+          color: $gray-color;
+          font-size: 16px;
+          margin-bottom: 0;
+          a {
+            color: $orange-red-color;
+          }
+        }
+      }
+      .google_sign {
+        .btn_social {
+          width: 100%;
+          background-color: #f9f9f9;
+          height: 60px;
+          font-size: 16px;
+          @include prefixer(transition, 0.3s, webkit moz o ms);
+          svg {
+            margin-right: 10px;
+            width: 25px;
+          }
+          .tio {
+            vertical-align: middle;
+            font-size: 22px;
+            display: inline-block;
+            margin-right: 10px;
+          }
+          &:hover {
+            background-color: #f5f5f5;
+          }
+        }
+      }
+      .btn_account {
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+      }
+    }
+  }
+  .item_brand {
+    margin: 1.874rem 0 0 0;
+    @include maxMobile {
+      margin-bottom: 1.25rem;
+    }
+    a {
+      display: inline-block;
+      img {
+        width: 27px;
+      }
+    }
+  }
+  .item_footer {
+    padding-bottom: 1.874rem;
+    @include maxMobile {
+      margin-top: 1.25rem;
+    }
+    p {
+      bottom: 0;
+      margin-bottom: 0;
+      color: $gray-color;
+      font-size: 13px;
+
+      a {
+        color: $white-color;
+      }
+    }
+  }
+  /*-----------------------------
+  signup_two
+-----------------------------*/
+  &.bg_dark {
+    background-color: $black-color;
+    background-image: none;
+    padding: 2.5rem 0;
+    &::before {
+      content: "";
+      @include overlay;
+      background-image: url("../img/workspace/bg-about.png");
+      background-size: 100%;
+      background-position-y: 90%;
+      position: fixed;
+      opacity: 0.25;
+    }
+  }
+  .signup_two {
+    .item_brand {
+      a {
+        display: inline-block;
+        span {
+          font-size: 25px;
+          font-weight: 500;
+          color: $white-color;
+          display: inline-block;
+          vertical-align: -webkit-baseline-middle;
+        }
+      }
+    }
+    .list__point {
+      .item {
+        margin-bottom: 1.875rem;
+        .icob {
+          width: 60px;
+          height: 60px;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          margin-right: 1.563rem;
+          .tio {
+            font-size: 20px;
+            color: $white-color;
+          }
+        }
+        p {
+          color: $white-color;
+          margin-bottom: 0;
+        }
+        &:first-child {
+          .icob {
+            background-color: #165df5;
+          }
+        }
+        &:nth-child(2) {
+          .icob {
+            background-color: #58d5d3;
+          }
+        }
+        &:nth-child(3) {
+          .icob {
+            background-color: #ffce53;
+          }
+        }
+      }
+    }
+  }
+}

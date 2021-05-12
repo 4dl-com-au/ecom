@@ -1,0 +1,126 @@
+/*
+    CSS Table of Sections
+    --------------------------
+    ** crypto_section
+    --------------------------
+    ** icon-fixed
+    --------------------------
+
+*/
+
+/*-----------------------------
+  crypto_section
+-----------------------------*/
+.crypto_section {
+  border-bottom: 1px solid $border-color;
+  .item-coin {
+    .icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 25px;
+      &.bit {
+        background-color: rgba($yollow-color, .1);
+        color: $yollow-color;
+      }
+      &.eth {
+        background-color: rgba($blue-color, .1);
+        color: $blue-color;
+      }
+      &.bch {
+        background-color: rgba($green-color, .1);
+        color: $green-color;
+        .tio {
+          transform: rotate(-30deg);
+        }
+      }
+      &.ltc {
+        background-color: rgba(#381840, .1);
+        color: #381840;
+      }
+    }
+    .title {
+      span {
+        font-size: 16px;
+        color: $dark-color;
+        font-weight: 500;
+      }
+      p {
+        color: $gray-color;
+        font-weight: 400;
+        font-size: 13px;
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+    }
+    .price {
+      span {
+        font-size: 16px;
+        color: $dark-color;
+        font-weight: 500;
+      }
+      p {
+        font-weight: 400;
+        font-size: 13px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  icon-fixed
+-----------------------------*/
+.icon-fixed {
+  .fixed {
+    position: absolute;
+    z-index: 2;
+    img {
+      width: 40px;
+    }
+    &.img01 {
+      top: 10%;
+      left: 40%;
+    }
+    &.img02 {
+      top: 30%;
+      left: 42%;
+    }
+    &.img03 {
+      top: 25%;
+      right: 30%;
+    }
+    &.img04 {
+      top: 41%;
+      right: 70%;
+    }
+    &.img05 {
+      top: 86%;
+      right: 24%;
+    }
+    &.img06 {
+      top: 90%;
+      left: 24%;
+    }
+    &.img07 {
+      top: 75%;
+      right: 44%;
+    }
+    &.img08 {
+      top: 52%;
+      left: 34%;
+    }
+    &.img09 {
+      top: 64%;
+      right: 31%;
+    }
+    &.img10 {
+      top: 37%;
+      right: 31%;
+    }
+  }
+}

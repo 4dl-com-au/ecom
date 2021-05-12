@@ -1,0 +1,64 @@
+/*
+    CSS Table of Sections
+    --------------------------
+    ** ng_donate
+    --------------------------
+
+*/
+
+/*-----------------------------
+  ng_donate
+-----------------------------*/
+.ng_donate {
+  background-color: $white-color;
+  margin-top: -2rem;
+  .title_sections {
+    margin-bottom: 2rem;
+  }
+  .gr_don_form {
+    background-color: $yollow-color;
+    padding: 2rem;
+    color: $white-color;
+    .form_donate {
+      .input-group {
+        input {
+          height: 55px;
+          border: 0;
+          border-radius: 0;
+          font-size: 25px;
+          font-weight: 600;
+          color: $dark-color;
+          padding-left: 1.25rem;
+          &::placeholder {
+            font-size: 13px;
+            font-weight: 400;
+            color: $gray-color;
+          }
+          &::-webkit-inner-spin-button,
+          &::-webkit-outer-spin-button {
+             -webkit-appearance: none;
+          }
+          &:focus,
+          &:active {
+            @include prefixer(box-shadow, none, webkit moz o ms);
+            outline: 0;
+          }
+        }
+        .input-group-prepend {
+          .input-group-text {
+            background-color: $white-color;
+            border: 0;
+            border-left: 1px solid $border-color;
+            font-weight: 500;
+            font-size: 16px;
+            color: $gray-color;
+            padding: 0 1.5rem;
+          }
+        }
+      }
+    }
+    .btn-primary {
+      margin-top: .75rem;
+    }
+  }
+}

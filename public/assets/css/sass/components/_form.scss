@@ -1,0 +1,278 @@
+/*-----------------------------
+  form-group
+-----------------------------*/
+.form-group {
+  label {
+    font-size: 14px;
+    font-weight: 400;
+    color: $dark-color;
+  }
+  input,
+  select {
+    height: 55px;
+    padding-left: 1.25rem;
+    color: $dark-color !important;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    border-color: $border-color;
+    @include prefixer(transition, 0.3s, webkit moz o ms);
+    &:focus,
+    &:active {
+      @include prefixer(box-shadow, none, webkit moz o ms);
+      border-color: $blue-color;
+    }
+    &::placeholder {
+      color: rgba($dark-color, 0.5);
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+  textarea {
+    padding: 1.25rem;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    border-color: $border-color;
+    @include prefixer(transition, 0.3s, webkit moz o ms);
+    &::placeholder {
+      color: rgba($dark-color, 0.5);
+      font-size: 13px;
+      font-weight: 400;
+    }
+    &:focus,
+    &:active {
+      @include prefixer(box-shadow, none, webkit moz o ms);
+      border-color: $blue-color;
+    }
+  }
+  .custom-select {
+    background-color: $white-color;
+    background: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Edown_key%3C/title%3E%3Cpath d='M12.72,15.78a.75.75,0,0,1-.53.22h-.38a.77.77,0,0,1-.53-.22L6.15,10.64a.5.5,0,0,1,0-.71l.71-.71a.49.49,0,0,1,.7,0L12,13.67l4.44-4.45a.5.5,0,0,1,.71,0l.7.71a.5.5,0,0,1,0,.71Z'/%3E%3C/svg%3E")
+      no-repeat right 0.75rem center/18px 20px;
+  }
+}
+/*-----------------------------
+  Select Language
+-----------------------------*/
+.select-menu {
+  position: relative;
+  z-index: 1;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 25px;
+  width: 120px;
+  select,
+  .button {
+    margin: 0;
+    border: 0;
+    text-align: left;
+    text-transform: none;
+    -webkit-appearance: none;
+  }
+  select {
+    pointer-events: none;
+    user-select: none;
+    opacity: 0;
+    padding: 15px 36px 6px 15px;
+    visibility: hidden;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 25px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    transform: translateY(var(--t));
+    transition: opacity 0.3s ease,
+      transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    li {
+      padding: 9px 36px 8px 15px;
+      cursor: pointer;
+    }
+  }
+  & > ul {
+    background: rgba($white-color, 0.05);
+    color: $gray-color;
+    border-radius: 8px;
+    li {
+      transition: color 0.3s ease;
+      &:hover {
+        color: $light-color;
+      }
+    }
+  }
+  .button {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    z-index: 1;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+    color: $white-color;
+    font-weight: 400;
+    font-size: 15px;
+    background: rgba($white-color, 0.05);
+    em {
+      --r: 45deg;
+      display: block;
+      position: absolute;
+      right: 15px;
+      top: 2px;
+      width: 7px;
+      height: 7px;
+      margin-top: 13px;
+      -webkit-backface-visibility: hidden;
+      &:before,
+      &:after {
+        --o: 0.4;
+        content: "";
+        width: 7px;
+        height: 7px;
+        opacity: var(--o);
+        display: block;
+        position: relative;
+        transition: opacity 0.2s ease;
+        transform: rotate(var(--r)) scale(0.75);
+      }
+      &:before {
+        border-left: 2px solid $white-color;
+        border-top: 2px solid $white-color;
+        top: 1px;
+      }
+      &:after {
+        border-right: 2px solid $white-color;
+        border-bottom: 2px solid $white-color;
+        bottom: 1px;
+      }
+    }
+  }
+  &:not(.open) {
+    & > ul {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  &.open {
+    &.tilt-up {
+      animation: tilt-up 0.4s linear forwards;
+      .button {
+        em {
+          &:before {
+            --o: 1;
+          }
+        }
+      }
+    }
+    &.tilt-down {
+      animation: tilt-down 0.4s linear forwards;
+      .button {
+        em {
+          &:after {
+            --o: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  input_subscribe
+-----------------------------*/
+.input_subscribe {
+  &.dark {
+    .item_input {
+      position: relative;
+      input {
+        background-color: transparent;
+        border: 1px solid rgba($white-color, 0.2);
+        height: 65px;
+        color: $white-color !important;
+        font-size: 16px;
+        padding-right: 6rem;
+        &::placeholder {
+          color: rgba($white-color, 0.5);
+          font-weight: 400;
+          font-size: 13px;
+        }
+      }
+      .btn_subscribe {
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+        background-color: transparent;
+      }
+      &:hover {
+        .btn_subscribe {
+          background-color: $orange-red-color;
+          color: $white-color;
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  simple_search
+-----------------------------*/
+.simple_search {
+  .input_group {
+    position: relative;
+    input {
+      padding-left: 45px;
+    }
+    .tio {
+      position: absolute;
+      top: 19px;
+      left: 20px;
+      font-size: 17px;
+      color: $gray-color;
+    }
+  }
+}
+
+/*-----------------------------
+  custom-checkbox 
+-----------------------------*/
+.custom-checkbox {
+  .custom-control-input {
+    &:focus {
+      outline: 0;
+      @include prefixer(box-shadow, none, webkit moz o ms);
+      ~ .custom-control-label {
+        &::before {
+          @include prefixer(box-shadow, none, webkit moz o ms);
+        }
+      }
+    }
+    &:checked ~ .custom-control-label {
+      &::before {
+        background-color: $blue-color;
+        border-color: $blue-color;
+      }
+    }
+  }
+  .custom-control-label {
+    padding-right: 0.3rem;
+    &::before {
+      width: 1.25rem;
+      height: 1.25rem;
+      border-color: #ced3e0;
+    }
+    &::after {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+}

@@ -1,0 +1,805 @@
+/*
+    CSS Table of Sections
+    --------------------------
+    ** default_footer
+    --------------------------
+    ** defalut-footer (Dark & light)
+    --------------------------
+    ** footer_short
+    --------------------------
+    ** theme_crypto
+    --------------------------
+    ** gq_footer
+    --------------------------
+    ** chiy_footer
+    --------------------------
+    ** foot_demo2
+    --------------------------
+    ** foot_demo3
+    --------------------------
+    ** footer__ch
+    --------------------------
+    ** footer__workspace
+    --------------------------
+    **footer_inner_one
+    --------------------------
+    **sh_footer_email
+    --------------------------
+    
+
+*/
+
+/*-----------------------------
+  default_footer
+-----------------------------*/
+.default_footer {
+  /*-----------------------------
+    dark
+  -----------------------------*/
+  &.dark {
+    position: relative;
+    background-color: #05173f;
+    overflow: hidden;
+    &:before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: -2px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='247.826' height='331.438' viewBox='0 0 247.826 331.438'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Cpath id='Path_383' data-name='Path 383' d='M3062.9,15531H2815.072v331.438H3062.9Z' transform='translate(-1562.898 -9045.335)' fill='%23fff'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='Mask_Group_27' data-name='Mask Group 27' transform='translate(-1252.174 -6485.665)' clip-path='url(%23clip-path)'%3E%3Cpath id='Subtraction_6' data-name='Subtraction 6' d='M653-8713.9h0v0L487.734-9000.017a90.008,90.008,0,0,0-14.44-18.771,90.037,90.037,0,0,0-18.5-14.158,90.034,90.034,0,0,0-21.514-8.939A90.023,90.023,0,0,0,409.8-9045H653ZM-847-9044.787h0V-9045h6.078c-2.016,0-4.061.074-6.077.213Z' transform='translate(847 15531)' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      width: 247px;
+      height: 331px;
+      z-index: 2;
+      @include maxSmall {
+        width: 160px;
+      }
+      @include maxMobile {
+        display: none;
+      }
+    }
+    .shape_overlay {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 0;
+      opacity: 0.06;
+    }
+    &.dark {
+      .title_sections {
+        h2 {
+          color: $white-color;
+        }
+        p {
+          color: $light-color;
+        }
+      }
+    }
+    .dashed-line {
+      border-bottom: 1px dashed rgba($white-color, 0.3);
+      max-width: 250px;
+    }
+  }
+  /*-----------------------------
+    light
+  -----------------------------*/
+  &.light {
+    &::before {
+      display: none;
+    }
+    .item_about {
+      .logo {
+        color: $dark-color;
+      }
+      p {
+        color: $gray-color;
+      }
+      .address {
+        span {
+          color: $dark-color;
+          a {
+            color: $blue-color;
+          }
+        }
+      }
+    }
+    .item_links {
+      h4 {
+        color: $dark-color;
+      }
+      .nav-link {
+        color: $gray-color;
+        &:hover {
+          color: $dark-color;
+        }
+      }
+    }
+    .item_subscribe {
+      h4 {
+        color: $dark-color;
+      }
+      p {
+        color: $gray-color;
+      }
+      .input_subscribe {
+        input {
+          border-color: $border-color;
+          color: $dark-color !important;
+          &::placeholder {
+            color: $light-color;
+          }
+        }
+        .btn_subscribe {
+          color: $dark-color;
+        }
+        &:hover {
+          .btn_subscribe {
+            background-color: $orange-red-color;
+            color: $white-color;
+          }
+        }
+      }
+      .app_smartphone {
+        .btn--app {
+          .blue {
+            background-color: rgba($blue-color, 0.1);
+            .tio {
+              color: $blue-color;
+            }
+          }
+          .dark {
+            background-color: rgba(#381840, 0.1);
+            .tio {
+              color: #381840;
+            }
+          }
+        }
+      }
+    }
+    .select-menu {
+      .button {
+        background: rgba($dark-color, 0.05);
+        color: $dark-color;
+        font-size: 14px;
+        ul {
+          li {
+            color: $dark-color;
+          }
+        }
+        em {
+          &::before {
+            border-left: 2px solid $gray-color;
+            border-top: 2px solid $gray-color;
+          }
+          &::after {
+            border-right: 2px solid $gray-color;
+            border-bottom: 2px solid $gray-color;
+          }
+        }
+      }
+      > ul {
+        background-color: $bg-color;
+      }
+    }
+    .copyright {
+      span {
+        color: $gray-color;
+        a {
+          color: $dark-color;
+          @include prefixer(transition, 0.3s, webkit moz o ms);
+          &:hover {
+            color: $blue-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  defalut-footer
+-----------------------------*/
+.defalut-footer {
+  position: relative;
+  &.light {
+    &::before {
+      display: none;
+    }
+    .item_about {
+      .logo {
+        color: $dark-color;
+      }
+      p {
+        color: $gray-color;
+      }
+      .address {
+        span {
+          color: $dark-color;
+          a {
+            color: $blue-color;
+          }
+        }
+      }
+    }
+    .item_links {
+      h4 {
+        color: $dark-color;
+      }
+      .nav-link {
+        color: $gray-color;
+        &:hover {
+          color: $dark-color;
+        }
+      }
+    }
+    .item_subscribe {
+      h4 {
+        color: $dark-color;
+      }
+      p {
+        color: $gray-color;
+      }
+      .input_subscribe {
+        input {
+          border-color: $border-color;
+          color: $dark-color !important;
+          &::placeholder {
+            color: $light-color;
+          }
+        }
+        .btn_subscribe {
+          color: $dark-color;
+        }
+        &:hover {
+          .btn_subscribe {
+            background-color: $orange-red-color;
+            color: $white-color;
+          }
+        }
+      }
+      .app_smartphone {
+        .btn--app {
+          .blue {
+            background-color: rgba($blue-color, 0.1);
+            .tio {
+              color: $blue-color;
+            }
+          }
+          .dark {
+            background-color: rgba(#381840, 0.1);
+            .tio {
+              color: #381840;
+            }
+          }
+        }
+      }
+    }
+    .select-menu {
+      .button {
+        background: rgba($dark-color, 0.05);
+        color: $dark-color;
+        font-size: 14px;
+        ul {
+          li {
+            color: $dark-color;
+          }
+        }
+        em {
+          &::before {
+            border-left: 2px solid $gray-color;
+            border-top: 2px solid $gray-color;
+          }
+          &::after {
+            border-right: 2px solid $gray-color;
+            border-bottom: 2px solid $gray-color;
+          }
+        }
+      }
+      > ul {
+        background-color: $bg-color;
+      }
+    }
+    .copyright {
+      span {
+        color: $gray-color;
+        a {
+          color: $dark-color;
+          @include prefixer(transition, 0.3s, webkit moz o ms);
+          &:hover {
+            color: $blue-color;
+          }
+        }
+      }
+    }
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='575' height='495' viewBox='0 0 575 495'%3E%3Cpath id='Polygon_69' data-name='Polygon 69' d='M408.225,0a40,40,0,0,1,34.589,19.91l120.518,207.5a40,40,0,0,1,0,40.179L442.814,475.09A40,40,0,0,1,408.225,495H166.775a40,40,0,0,1-34.589-19.91L11.668,267.59a40,40,0,0,1,0-40.179L132.186,19.91A40,40,0,0,1,166.775,0Z' fill='%23165df5'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: 450px;
+    width: 575px;
+    height: 495px;
+    bottom: -45%;
+    right: -50%;
+    @include maxMobile {
+      display: none;
+    }
+  }
+  .item_about {
+    .logo {
+      color: $white-color;
+    }
+    p {
+      margin-top: 1.45rem;
+      color: $light-color;
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+    .address {
+      margin-top: 1.45rem;
+      span {
+        display: block;
+        color: $white-color;
+        font-size: 14px;
+      }
+    }
+  }
+  .item_links {
+    h4 {
+      color: $white-color;
+      font-size: 18px;
+      font-weight: 500;
+      text-transform: capitalize;
+      margin-bottom: 1.875rem;
+    }
+    .nav-link {
+      display: block;
+      padding-left: 0;
+      color: $light-color;
+      padding-bottom: 0.75rem;
+      @include prefixer(transition, 0.3s, webkit moz o ms);
+      &:hover {
+        color: $white-color;
+        padding-left: 0.3rem;
+      }
+    }
+  }
+  .item_subscribe {
+    h4 {
+      color: $white-color;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 1.875rem;
+    }
+    p {
+      color: $light-color;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .form-group {
+      &.subscribebtn {
+        margin-top: 1rem;
+        .item_input {
+          position: relative;
+          input {
+            border: 0;
+            padding-right: 3.5rem;
+          }
+          .btn_subscribe {
+            position: absolute;
+            color: $dark-color;
+            top: 0.4rem;
+            right: 0.6rem;
+            font-size: 15px;
+            width: 42px;
+            height: 42px;
+            background-color: $blue-color;
+            .tio {
+              color: $white-color;
+              font-size: 20px;
+              display: flex;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+  .copyright {
+    color: $light-color;
+    font-size: 14px;
+    a {
+      color: $white-color;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  footer_short
+-----------------------------*/
+.footer_short {
+  padding-bottom: 5rem;
+  .social--media {
+    margin-top: 3.75rem;
+    .so-link {
+      width: 50px;
+      height: 50px;
+      border-radius: 20px;
+      background-color: rgba($dark-color, 0.05);
+      margin: 0 0.25rem;
+      @include prefixer(transition, 0.3s, webkit moz o ms);
+      @include maxMobile {
+        margin-bottom: 0.5rem;
+      }
+      .tio {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 22px;
+        color: $dark-color;
+        padding-top: 0.6rem;
+        @include prefixer(transition, 0.3s, webkit moz o ms);
+      }
+      &:hover {
+        background-color: $blue-color;
+        .tio {
+          color: $white-color;
+        }
+      }
+    }
+  }
+  .other--links {
+    margin-top: 1.875rem;
+    a {
+      color: $gray-color;
+      font-size: 16px;
+      font-weight: 400;
+      margin: 0.6rem;
+      @include prefixer(transition, 0.3s, webkit moz o ms);
+      @include maxMobile {
+        margin-bottom: 0.5rem;
+      }
+      &:hover {
+        color: $dark-color;
+      }
+    }
+  }
+  .opyright {
+    margin-top: 1.875rem;
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      color: $light-color;
+      margin-bottom: 0;
+      a {
+        color: $dark-color;
+        @include prefixer(transition, 0.3s, webkit moz o ms);
+        &:hover {
+          color: $blue-color;
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  theme_crypto
+-----------------------------*/
+.theme_crypto {
+  position: relative;
+  .img-footer {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+  }
+  .social--media {
+    .so-link {
+      background-color: rgba($white-color, 0.1);
+      border-radius: 15px;
+      @include prefixer(transition, 0.3s, webkit moz o ms);
+      .tio {
+        color: $white-color;
+      }
+      &:hover {
+        background-color: $white-color;
+        .tio {
+          color: $currency-d-color;
+        }
+      }
+    }
+  }
+  .other--links {
+    a {
+      color: $white-color;
+      &:hover {
+        color: $magenta-color;
+      }
+    }
+  }
+  .opyright {
+    p {
+      color: $currency-p-color;
+      a {
+        color: $white-color;
+        &:hover {
+          color: $sky-color;
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  gq_footer
+-----------------------------*/
+.gq_footer {
+  background-color: #071726;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  @include maxMobile {
+    position: inherit;
+    padding: 3.125rem 0;
+  }
+  &:before {
+    display: none;
+  }
+}
+
+/*-----------------------------
+  chiy_footer
+-----------------------------*/
+.chiy_footer {
+  background-color: #000;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background: $yollow-color;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  .select-menu {
+    .button {
+      background: rgba($white-color, 0.15);
+    }
+    &.select-menu > ul {
+      background: rgba($white-color, 0.05);
+      color: rgba($white-color, 0.5);
+    }
+  }
+  .subscribebtn {
+    input {
+      background-color: rgba($white-color, 0.15);
+      color: $white-color !important;
+      &::placeholder {
+        color: rgba($white-color, 0.3);
+      }
+    }
+    .btn_subscribe {
+      background-color: $yollow-color !important;
+      &:before {
+        background: $yollow-color;
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  foot_demo2
+-----------------------------*/
+.foot_demo2 {
+  position: relative;
+  background-color: #040309 !important;
+  z-index: 1;
+  overflow: hidden;
+  &:before {
+    content: "";
+    background: url("../img/hosting/01.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: 0;
+    left: inherit;
+    bottom: 0;
+    opacity: 0.14;
+    height: 100%;
+    width: 100%;
+    background-position: 100%;
+    z-index: -1;
+    @include maxMobile {
+      display: none;
+    }
+  }
+  .defalut-footer {
+    &:before {
+      display: none;
+    }
+  }
+  .item_subscribe {
+    .form-group {
+      &.subscribebtn {
+        .item_input {
+          input {
+            border-radius: 8px !important;
+            background-color: $white-color !important;
+            color: $dark-color !important;
+            &::placeholder {
+              color: $gray-color !important;
+            }
+          }
+          .btn_subscribe {
+            border-radius: 8px !important;
+            background-color: $red-color !important;
+            &:focus {
+              &:before {
+                background: $red-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  foot_demo3
+-----------------------------*/
+.foot_demo3 {
+  position: relative;
+  overflow: hidden;
+  width: 93%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba($dark-color, 0.05);
+  border-radius: 12px;
+  margin-top: 8rem;
+  margin-bottom: 3.5rem;
+  @include maxMobile {
+    margin-bottom: 1rem;
+  }
+  &:after {
+    content: "" !important;
+    background: url("../img/agency/3224657.svg") no-repeat 50% 50%;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: -70%;
+    top: 0;
+    z-index: -1;
+    background-size: 80%;
+    @include maxMobile {
+      background-size: cover;
+      right: -60%;
+    }
+  }
+}
+
+/*-----------------------------
+  footer__ch
+-----------------------------*/
+.footer__ch {
+  .subscribebtn {
+    .btn_subscribe {
+      background-color: $lightgreen-color !important;
+      &:focus,
+      &:active {
+        &::before {
+          background: $lightgreen-color !important;
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  footer__workspace
+-----------------------------*/
+.footer__workspace {
+  .subscribebtn {
+    .btn_subscribe {
+      background-color: $orange-red-color !important;
+      &:focus,
+      &:active {
+        &::before {
+          background: $orange-red-color !important;
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  footer_inner_one
+-----------------------------*/
+.footer_inner_one {
+  background-color: #240041 !important;
+  &::before {
+    display: none;
+  }
+  &.bg-black {
+    background-color: $black-color !important;
+  }
+}
+
+/*-----------------------------
+  sh_footer_email
+-----------------------------*/
+.sh_footer_email {
+  .email_logo {
+    .brand_logo {
+      margin-right: 40px;
+      img {
+        width: 27px;
+      }
+    }
+    .txt {
+      span {
+        display: block;
+        color: $light-color;
+        margin-bottom: 0;
+      }
+      a {
+        display: block;
+        font-size: 50px;
+        color: $white-color;
+        text-decoration: none;
+        @include maxSmall {
+          font-size: 40px;
+        }
+        @include maxMobile {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+  .dividar {
+    border-bottom: 1px solid rgba($white-color, 0.13);
+    margin: 80px 0;
+    @include maxSmall {
+      margin: 50px 0;
+    }
+  }
+  .copyright {
+    p {
+      margin-bottom: 0;
+      color: $gray-color;
+      font-size: 14px;
+      font-weight: 400;
+      a {
+        color: $white-color;
+      }
+    }
+  }
+  .nav {
+    .nav-item {
+      .nav-link {
+        color: $gray-color;
+        font-size: 14px;
+        font-weight: 400;
+        padding-left: 0;
+        @include prefixer(transition, 0.3s, webkit moz o ms);
+        &:hover {
+          color: $white-color;
+        }
+      }
+    }
+  }
+  &.bg_fitness {
+    background-color: #06121e;
+    padding-top: 340px;
+  }
+}

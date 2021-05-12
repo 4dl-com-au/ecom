@@ -1,0 +1,132 @@
+/*
+    CSS Table of Sections
+    --------------------------
+    ** TimeLine Roadmap
+    --------------------------
+
+*/
+
+/*-----------------------------
+  TimeLine Roadmap
+-----------------------------*/
+.timeline-box {
+  .item_timeline {
+    position: relative;
+    border: 5px solid $magenta-color;
+    border-left: 0;
+    padding: 2rem;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    min-height: 200px;
+    &:before {
+      left: 0;
+      bottom: -15px;
+      content: "";
+      border: 10px solid $currency-d-color;
+      display: inline-flex;
+      position: absolute;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: -2px;
+      width: 5px;
+      height: 5px;
+      background-color: $magenta-color;
+      border-radius: 50%;
+      display: inline-flex;
+    }
+    .details {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include maxMobile {
+        padding-bottom: 5rem;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        display: inline-flex;
+        width: 20px;
+        height: 20px;
+        border: 2px solid $white-color;
+        background-color: $currency-d-color;
+        border-radius: 50%;
+        top: -2.8rem;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        display: inline-flex;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='18' viewBox='0 0 1 18'%3E%3Cline id='Line_18' data-name='Line 18' y2='18' transform='translate(0.5)' fill='none' stroke='%23fff' stroke-width='1' stroke-dasharray='2' opacity='0.5'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        top: -1rem;
+        width: 1px;
+        height: 18px;
+      }
+      &.active {
+        &:before {
+          background-color: $white-color;
+          border-color: $magenta-color;
+          border-width: 6px;
+          @include prefixer(
+            box-shadow,
+            0px 0px 30px 0px rgba($magenta-color, 0.5),
+            webkit moz o ms
+          );
+        }
+      }
+      .data {
+        margin-top: 0.5rem;
+        time {
+          font-size: 14px;
+          font-weight: 400;
+          color: $currency-p-color;
+        }
+        h4 {
+          margin-top: 0.5rem;
+          font-size: 16px;
+          color: $white-color;
+          margin-bottom: 0;
+        }
+      }
+    }
+    &.itemTwo {
+      border: 0;
+      position: relative;
+      &:before {
+        content: "";
+        border: 5px solid #49275b;
+        border-radius: 0;
+        position: absolute;
+        top: -5px;
+        border-right: 0;
+        border-left: 1;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        width: 38%;
+        height: 205px;
+        left: 0;
+        @include maxMobile {
+          width: 49%;
+          height: auto;
+        }
+      }
+      &:after {
+        display: none;
+      }
+    }
+    &.itemThree {
+      border: 0;
+      min-height: 0;
+      &:before {
+        display: none;
+      }
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,410 @@
+/*
+    CSS Table of Sections
+    --------------------------
+    ** logos_section
+    --------------------------
+    ** logos-simple
+    --------------------------
+    ** logos_demo2
+    --------------------------
+    ** logos_demo3
+    --------------------------
+    ** integration__logo
+    --------------------------
+    ** companies__logo
+    --------------------------
+    **group_logo_list
+    --------------------------
+
+*/
+
+/*-----------------------------
+  logos_section
+-----------------------------*/
+.logos_section {
+  h3 {
+    font-size: 16px;
+    font-weight: 400;
+    color: $gray-color;
+    margin-bottom: 2.5rem;
+  }
+  .wrapper_logos {
+    position: relative;
+    direction: ltr;
+    .bx-wrapper {
+      min-width: 100%;
+    }
+    .logos_masks {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      @include prefixer(
+        background,
+        linear-gradient(
+          to right,
+          #fff 0%,
+          rgba(255, 255, 255, 0) 20%,
+          rgba(255, 255, 255, 0) 80%,
+          #fff 100%
+        ),
+        webkit moz o ms
+      );
+    }
+  }
+  .items {
+    .item-client {
+      margin: 0;
+      position: relative;
+      span {
+        text-align: center;
+      }
+      @include maxSmall {
+        display: inline-block;
+        margin-bottom: 1.5rem;
+      }
+      @include prefixer(transition, 0.4s, webkit moz o ms);
+      img {
+        width: 100px;
+        @include prefixer(transition, 0.4s, webkit moz o ms);
+      }
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        font-size: 14px;
+        opacity: 0;
+        color: $blue-color;
+        @include prefixer(transition, 0.4s, webkit moz o ms);
+      }
+      &:hover {
+        img {
+          opacity: 0;
+        }
+        span {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+/*-----------------------------
+  logos-simple
+-----------------------------*/
+.logos-simple {
+  a {
+    margin-right: 1rem;
+    @include maxMobile {
+      display: inline-flex;
+      margin-bottom: 0.75rem;
+    }
+    img {
+      width: 65px;
+    }
+  }
+}
+
+/*-----------------------------
+  logos_demo2
+-----------------------------*/
+.logos_demo2 {
+  .item_logo {
+    margin-bottom: 3.125rem;
+    img {
+      width: 180px;
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/*-----------------------------
+  logos_demo3
+-----------------------------*/
+.logos_demo3 {
+  position: relative;
+  background-color: $white-color;
+  margin-top: -10rem;
+  .items_loog {
+    .item-client {
+      width: 154px;
+      display: inline-block;
+      margin: 0 1rem;
+    }
+  }
+}
+
+/*-----------------------------
+  integration__logo
+-----------------------------*/
+.integration__logo {
+  height: 770px;
+  @include maxMobile {
+    height: 830px;
+  }
+  .block__circle {
+    position: relative;
+    @include maxMobile {
+      margin-top: 5rem;
+    }
+    &::before {
+      content: "";
+      background-image: url("../img/software/bg-logo.png");
+      width: 100%;
+      height: 685px;
+      position: absolute;
+      left: 0;
+      bottom: -320px;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      z-index: -1;
+      @include maxSmall {
+        height: 470px;
+      }
+      @include maxMobile {
+        display: none;
+      }
+    }
+    .item_logo {
+      &:first-of-type {
+        width: 120px;
+        height: 120px;
+        background-color: $white-color;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -60px;
+        left: 160px;
+        @include prefixer(
+          box-shadow,
+          0px 5px 60px 0px rgba(11, 34, 56, 0.05),
+          webkit moz o ms
+        );
+        @include maxSmall {
+          left: 0;
+        }
+        img {
+          width: 102px;
+          height: 102px;
+        }
+      }
+      &:nth-of-type(2) {
+        width: 100px;
+        height: 100px;
+        background-color: $dark-color;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: -290px;
+        left: 260px;
+        @include maxSmall {
+          bottom: -250px;
+          left: 140px;
+        }
+        @include maxMobile {
+          bottom: -200px;
+          left: 0;
+        }
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+      &:nth-of-type(3) {
+        width: 60px;
+        height: 60px;
+        background-color: #ffce53;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 30px;
+        left: 420px;
+        @include maxSmall {
+          left: 280px;
+        }
+        @include maxMobile {
+          left: 140px;
+          top: 60px;
+        }
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+      &:nth-of-type(4) {
+        width: 100px;
+        height: 100px;
+        background-color: #2a6cfa;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -70px;
+        right: 280px;
+        @include maxSmall {
+          right: 80px;
+        }
+        @include maxMobile {
+          right: 0;
+        }
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+      &:nth-of-type(5) {
+        width: 120px;
+        height: 120px;
+        background-color: $white-color;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: -360px;
+        left: 45%;
+        @include prefixer(
+          box-shadow,
+          0px 5px 60px 0px rgba(11, 34, 56, 0.05),
+          webkit moz o ms
+        );
+        @include maxSmall {
+          bottom: -340px;
+        }
+        @include maxMobile {
+          left: 15%;
+        }
+        img {
+          width: 92px;
+          height: 92px;
+        }
+      }
+      &:nth-of-type(6) {
+        width: 100px;
+        height: 100px;
+        background-color: $white-color;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: -200px;
+        left: 61%;
+        @include prefixer(
+          box-shadow,
+          0px 5px 60px 0px rgba(11, 34, 56, 0.05),
+          webkit moz o ms
+        );
+        @include maxSmall {
+          bottom: -177px;
+          left: 58%;
+        }
+        @include maxMobile {
+          bottom: -317px;
+          left: 60%;
+        }
+        img {
+          width: 84px;
+          height: 84px;
+        }
+      }
+      &:nth-of-type(7) {
+        width: 120px;
+        height: 120px;
+        background-color: $white-color;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: -170px;
+        right: 8%;
+        @include prefixer(
+          box-shadow,
+          0px 5px 60px 0px rgba(11, 34, 56, 0.05),
+          webkit moz o ms
+        );
+        @include maxSmall {
+          right: 0;
+        }
+        @include maxMobile {
+          bottom: -190px;
+        }
+        img {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  companies__logo
+-----------------------------*/
+.companies__logo {
+  background-color: #22025f;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  width: 100%;
+  max-width: 1310px;
+  margin-top: -12.063rem;
+  padding-top: 20.25rem;
+  padding-bottom: 7.5rem;
+  padding-left: 9.375rem;
+  @include maxSmall {
+    padding-left: inherit;
+  }
+  .img__logo {
+    img {
+      width: 140px;
+      margin: 0 1.25rem;
+      opacity: 0.55;
+      @include prefixer(transition, 0.3s, webkit moz o ms);
+      @include maxSmall {
+        width: 120px;
+        margin-bottom: 1.25rem;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  group_logo_list
+-----------------------------*/
+.group_logo_list {
+  .item_tto {
+    border-left: 1px solid$border-color;
+    text-align: center;
+    padding: 30px 0;
+    @include maxSmall {
+      text-align: left;
+      border: 0;
+    }
+    img {
+      width: 140px;
+      opacity: 0.25;
+      margin: 0 30px;
+      @include maxSmall {
+        margin: 20px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

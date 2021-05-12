@@ -1,0 +1,544 @@
+/*=== Small Button ====
+==================*/
+.btn_sm_primary {
+  padding: 0.7rem 1.55rem;
+  font-size: 15px;
+  text-align: center;
+  @include prefixer(transition, 0.3s, webkit moz o ms);
+  &:hover {
+    opacity: 0.9;
+  }
+}
+/*=== Medium Button ====
+==================*/
+.btn_md_primary {
+  padding: 0.85rem 1.8rem;
+  font-size: 15px;
+  text-align: center;
+  @include prefixer(transition, 0.3s, webkit moz o ms);
+  &:hover {
+    opacity: 0.9;
+  }
+}
+/*=== Large Button ====
+==================*/
+.btn_lg_primary {
+  padding: 0.9rem 2.3rem;
+  font-size: 15px;
+  text-align: center;
+  @include prefixer(transition, 0.3s, webkit moz o ms);
+  &:hover {
+    opacity: 0.9;
+  }
+}
+/*=== XLarge Button ====
+==================*/
+.btn_xl_primary {
+  padding: 1.1rem 2.3rem;
+  font-size: 15px;
+  text-align: center;
+  @include prefixer(transition, 0.3s, webkit moz o ms);
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+/*-----------------------------
+  btn-default
+-----------------------------*/
+.header-nav-center {
+  .btn-default {
+    margin-right: 0.5rem;
+  }
+}
+
+/*-----------------------------
+  btn video
+-----------------------------*/
+.btn-video {
+  background-color: $blue-color;
+  color: $white-color;
+  padding: 0.9rem 1.55rem;
+  text-align: center;
+  position: relative;
+  &:before {
+    background: $blue-color;
+    border-radius: 50px;
+    content: "";
+    display: block;
+    height: 100%;
+    opacity: 0.25;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    @include prefixer(
+      animation,
+      ripple 1.3s infinite cubic-bezier(0.29, -0.01, 0.17, 0.95),
+      webkit moz o ms
+    );
+  }
+  &.ripple_box {
+    &:before {
+      border-radius: 8px;
+    }
+  }
+  .tio {
+    vertical-align: sub;
+    margin-right: 0.2rem;
+  }
+  &:hover {
+    color: $white-color;
+  }
+}
+
+/*-----------------------------
+  btn video Circle
+-----------------------------*/
+.btn-ripple_circle {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .icon {
+    background-color: $blue-color;
+    color: $white-color;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .effect_ripp {
+    border-radius: 50%;
+    display: block;
+    height: 100%;
+    opacity: 0.25;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background: $gray-color;
+    @include prefixer(
+      animation,
+      ripple_Circle 1.3s infinite cubic-bezier(0.29, -0.01, 0.17, 0.95),
+      webkit moz o ms
+    );
+  }
+  .tio {
+    vertical-align: middle;
+    font-size: 24px;
+    margin: 0;
+  }
+  &:hover {
+    color: $white-color;
+  }
+}
+
+/*-----------------------------
+  play_video
+-----------------------------*/
+.play_video {
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  background-color: $dark-color;
+  padding: 0;
+  @include prefixer(transition, 0.3s, webkit moz o ms);
+  &::after {
+    content: "";
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    display: block;
+    z-index: -1;
+    background: rgba($dark-color, 0.1);
+    border-radius: 50%;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    display: block;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: rgba($dark-color, 0.1);
+    @include prefixer(
+      animation,
+      pulseRipple 2.5s ease-in-out infinite,
+      webkit moz o ms
+    );
+  }
+  &:focus {
+    background-color: $dark-color;
+  }
+  .tio {
+    font-size: 24px;
+    color: $white-color;
+  }
+}
+
+/*-----------------------------
+  Smartphone app
+-----------------------------*/
+.app_smartphone {
+  .btn--app {
+    display: inline-block;
+    margin-right: 1.5rem;
+    .icon {
+      border-radius: 20px;
+      width: 50px;
+      height: 50px;
+      background-color: $aquamarine-color;
+      padding: 0.75rem;
+      margin-right: 0.75rem;
+      .tio {
+        color: $white-color;
+        font-size: 25px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+      }
+    }
+    .txt {
+      span {
+        color: $light-color;
+        font-size: 12px;
+        font-weight: 400;
+      }
+      h4 {
+        font-weight: 400;
+        color: $white-color;
+        font-size: 18px;
+        margin-top: 0.2rem;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+/*-----------------------------
+  Menu Mobile
+-----------------------------*/
+.menu {
+  color: $dark-color;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  position: relative;
+  border: none;
+  background: none;
+  cursor: pointer;
+  -webkit-appearence: none;
+  -webkit-tap-highlight-color: transparent;
+  &.ripplemenu {
+    &:active {
+      &:before {
+        background: $blue-color;
+        border-radius: 50%;
+        content: "";
+        display: block;
+        height: 100%;
+        opacity: 0.25;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+        top: 0;
+        left: -9px;
+        animation: RippleMenu 0.3s cubic-bezier(0.29, -0.01, 0.17, 0.95);
+      }
+    }
+  }
+  svg {
+    width: 44px;
+    height: 48px;
+    top: -6px;
+    left: -14px;
+    stroke: $dark-color;
+    stroke-width: 0.2rem;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    display: block;
+    position: absolute;
+    @include maxSmall {
+      left: 0;
+    }
+    path {
+      transition: stroke-dasharray var(--duration, 0.85s) var(--easing, ease)
+          var(--delay, 0s),
+        stroke-dashoffset var(--duration, 0.85s) var(--easing, ease)
+          var(--delay, 0s);
+      stroke-dasharray: var(--array-1, 26px) var(--array-2, 100px);
+      stroke-dashoffset: var(--offset, 126px);
+      transform: translateZ(0);
+      &:nth-child(2) {
+        --duration: 0.7s;
+        --easing: ease-in;
+        --offset: 100px;
+        --array-2: 74px;
+      }
+      &:nth-child(3) {
+        --offset: 133px;
+        --array-2: 107px;
+      }
+    }
+  }
+  &.active {
+    svg {
+      path {
+        --offset: 57px;
+        &:nth-child(1),
+        &:nth-child(3) {
+          --delay: 0.15s;
+          --easing: cubic-bezier(0.2, 0.4, 0.2, 1.1);
+        }
+        &:nth-child(2) {
+          --duration: 0.4s;
+          --offset: 2px;
+          --array-1: 1px;
+        }
+        &:nth-child(3) {
+          --offset: 58px;
+        }
+      }
+    }
+  }
+}
+/*-----------------------------
+  Button DropDown Download
+-----------------------------*/
+.drop_download {
+  position: relative;
+  color: $white-color;
+  font-size: 15px;
+  padding: 0.6rem 1.75rem;
+  border-radius: 8px;
+  text-align: center;
+  @include prefixer(transition, 0.3s, webkit moz o ms);
+  .links-btn {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    a {
+      color: $currency-p-color;
+      font-size: 14px;
+      display: block;
+      padding-top: 0.8rem;
+      text-align: left;
+      padding-left: 0.25rem;
+      &:nth-child(1) {
+        transform: translate(-12px);
+      }
+      &:nth-child(2) {
+        transform: translate(-16px);
+      }
+      &:nth-child(3) {
+        transform: translate(-22px);
+      }
+      @include prefixer(transition, 0.3s, webkit moz o ms);
+    }
+  }
+  &:hover {
+    color: $white-color;
+    &:before {
+      content: "";
+      background-color: rgba($white-color, 0.1);
+      height: 155px;
+      width: 130px;
+      position: absolute;
+      border-radius: 8px;
+      left: 0;
+      top: 0;
+    }
+    .links-btn {
+      opacity: 1;
+      pointer-events: auto;
+      a {
+        transform: translate(0px);
+        &:nth-child(1) {
+          @include prefixer(transition, 0.2s, webkit moz o ms);
+        }
+        &:nth-child(2) {
+          @include prefixer(transition, 0.4s, webkit moz o ms);
+        }
+        &:nth-child(3) {
+          @include prefixer(transition, 0.5s, webkit moz o ms);
+        }
+        &:hover {
+          color: $white-color;
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  Button Cryptocurrency (Dark
+-----------------------------*/
+.button--click {
+  .btn-token {
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    color: $white-color;
+    margin: 0 0.75rem;
+    display: inline-flex;
+    justify-content: center;
+    &.c-gradient {
+      @include prefixer(
+        background,
+        linear-gradient(90deg, $sky-color 0%, $magenta-color 100%),
+        webkit moz o ms
+      );
+    }
+    &.defalult {
+      border: 1px solid rgba($white-color, 0.4);
+    }
+  }
+}
+
+/*-----------------------------
+  Button Read More
+-----------------------------*/
+.btn_readmore {
+  color: $blue-color;
+  font-size: 16px;
+  position: relative;
+  padding-left: 0;
+  @include prefixer(transition, 0.4s, webkit moz o ms);
+  &:before {
+    content: "";
+    position: absolute;
+    left: -0.7rem;
+    top: 0;
+    width: 45%;
+    height: 100%;
+    background-color: rgba($blue-color, 0.1);
+    @include prefixer(
+      transition,
+      0.4s cubic-bezier(0.4, 0.2, 0.01, 1.01),
+      webkit moz o ms
+    );
+  }
+  &:hover {
+    color: $blue-color;
+    &:before {
+      width: 0;
+    }
+  }
+}
+
+/*-----------------------------
+  Back to top with progress indicator
+-----------------------------*/
+.prgoress_indicator {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
+  display: block;
+  border-radius: 50px;
+  box-shadow: inset 0 0 0 2px rgba($blue-color, 0.2);
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  @include prefixer(transform, translateY(15px), webkit moz o ms);
+  @include prefixer(transition, all 200ms linear, webkit moz o ms);
+  &.active-progress {
+    opacity: 1;
+    visibility: visible;
+    @include prefixer(transform, translateY(0), webkit moz o ms);
+  }
+  &::after {
+    position: absolute;
+    font-family: "The-Icon-of";
+    content: "\e9a2";
+    text-align: center;
+    line-height: 46px;
+    font-size: 18px;
+    color: rgba($blue-color, 0.2);
+    left: 0;
+    top: 0;
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    display: block;
+    z-index: 1;
+    @include prefixer(transition, all 200ms linear, webkit moz o ms);
+  }
+  &::before {
+    position: absolute;
+    font-family: "The-Icon-of";
+    content: "\e9a2";
+    text-align: center;
+    line-height: 46px;
+    font-size: 18px;
+    opacity: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    left: 0;
+    top: 0;
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    display: block;
+    z-index: 2;
+    @include prefixer(transition, all 200ms linear, webkit moz o ms);
+  }
+  &:hover {
+    &::after {
+      color: $blue-color;
+    }
+    &:before {
+      opacity: 1;
+    }
+  }
+  svg {
+    path {
+      fill: none;
+    }
+    &.progress-circle {
+      path {
+        stroke: $blue-color;
+        stroke-width: 4;
+        box-sizing: border-box;
+        @include prefixer(transition, all 200ms linear, webkit moz o ms);
+      }
+    }
+  }
+}
+
+/*-----------------------------
+  btn__more
+-----------------------------*/
+.btn__more {
+  .tio {
+    vertical-align: middle;
+    @include prefixer(transition, 0.3s, webkit moz o ms);
+  }
+  &:hover {
+    .tio {
+      color: $dark-color;
+      font-size: 18px;
+      margin-left: 5px;
+    }
+  }
+}

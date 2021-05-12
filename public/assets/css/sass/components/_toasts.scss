@@ -1,0 +1,56 @@
+/*-----------------------------
+  toast
+-----------------------------*/
+.toast {
+  position: fixed;
+  opacity: 0;
+  bottom: -6rem;
+  border: 0;
+  border-radius: 8px;
+  padding: 1.25rem 2rem;
+  background-color: $white-color;
+  backdrop-filter: blur(0);
+  z-index: 999;
+  @include prefixer(transition, 1.2s cubic-bezier(0.86,0,0.07,1), webkit moz o ms);
+  @include prefixer(box-shadow, 0px 0px 40px 0px rgba(11,34,56,0.06), webkit moz o ms);
+  .toast-body {
+    padding: 0;
+  }
+  &.toast_demo {
+    .close {
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      right: 14px;
+      font-size: 18px;
+      top: 13px;
+    }
+    h5 {
+      font-size: 16px;
+      font-weight: 500;
+      color: $dark-color;
+    }
+    p {
+      margin-bottom: 0;
+      font-size: 16px;
+      color: $gray-color;
+      a {
+        display: inline-block;
+        color: $blue-color;
+      }
+    }
+  }
+  &.show {
+    display: block;
+    opacity: 1;
+    pointer-events: all;
+    bottom: 1.5rem;
+    @include prefixer(transition, 1.2s cubic-bezier(0.86,0,0.07,1), webkit moz o ms);
+  }
+  &.hide {
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    @include prefixer(transition, 1.2s cubic-bezier(0.86,0,0.07,1), webkit moz o ms);
+  }
+}
