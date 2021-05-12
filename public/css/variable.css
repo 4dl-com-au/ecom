@@ -1,0 +1,11 @@
+:root {
+  --primary-color: #1386f0;
+  --primary-text-color: #fff;
+  --primary-btn-outline-text-color: #000;
+  --primary-btn-outline-hover-text-color: #fff;
+}
+
+.work-box .work-icon i,
+.work-box .work-icon em {
+  background: var(--primary-color) !important;
+}
