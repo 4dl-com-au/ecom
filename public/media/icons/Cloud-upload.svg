@@ -1,0 +1,5 @@
+<svg id="Cloud-upload" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path id="Shape" d="M0,0H24V24H0Z" fill="none" fill-rule="evenodd"/>
+  <path id="Combined-Shape" d="M5.747,13.043A6,6,0,1,1,14.811,6.5H17.25a3.75,3.75,0,0,1,0,7.5h-9A3.736,3.736,0,0,1,5.747,13.043Z" fill="#fff" fill-rule="evenodd" opacity="0.5"/>
+  <path id="Shape-2" data-name="Shape" d="M11.129,15.734V17.69H9.121a.5.5,0,0,0-.5.5v1.023a.5.5,0,0,0,.5.5h2.008V21.67a.5.5,0,0,0,.823.382l3.506-2.968a.5.5,0,0,0,0-.763l-3.506-2.968a.5.5,0,0,0-.823.382Z" transform="translate(-6.702 30.621) rotate(-90)" fill="#fff"/>
+</svg>

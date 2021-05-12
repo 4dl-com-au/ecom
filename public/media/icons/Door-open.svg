@@ -1,0 +1,5 @@
+<svg id="Door-open" xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25">
+  <rect id="bound" width="24" height="25" fill="none" opacity="0.3"/>
+  <path id="Path-90" d="M7,5.1V21.875H5V3.125h6V5.1Z" fill="#fff" opacity="0.3"/>
+  <path id="Combined-Shape" d="M10.185,2.342l8,1.51A1,1,0,0,1,19,4.835v15.33a1,1,0,0,1-.815.983l-8,1.51A1,1,0,0,1,9,21.675V3.325a1,1,0,0,1,1.185-.983Zm1.731,11.1a1.341,1.341,0,0,0,1.25-1.416,1.341,1.341,0,0,0-1.25-1.416,1.341,1.341,0,0,0-1.25,1.416A1.341,1.341,0,0,0,11.917,13.444Z" fill="#fff" fill-rule="evenodd"/>
+</svg>

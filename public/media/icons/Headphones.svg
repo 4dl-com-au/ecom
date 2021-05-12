@@ -1,0 +1,5 @@
+<svg id="Headphones" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <rect id="bound" width="24" height="24" fill="none"/>
+  <path id="Combined-Shape" d="M19,16V12A7,7,0,0,0,5,12v4Zm2,0H3V12a9,9,0,0,1,18,0Z" fill="#f28e1c" opacity="0.3"/>
+  <path id="Combined-Shape-2" data-name="Combined-Shape" d="M5,14H6a2,2,0,0,1,2,2v3a2,2,0,0,1-2,2H5a2,2,0,0,1-2-2V16A2,2,0,0,1,5,14Zm13,0h1a2,2,0,0,1,2,2v3a2,2,0,0,1-2,2H18a2,2,0,0,1-2-2V16A2,2,0,0,1,18,14Z" fill="#f28e1c" fill-rule="evenodd"/>
+</svg>

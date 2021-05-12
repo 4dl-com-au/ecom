@@ -1,0 +1,12 @@
+<svg id="Dial-numbers" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <rect id="bound" width="24" height="24" fill="none"/>
+  <rect id="Rectangle-7" width="4" height="4" rx="2" transform="translate(4 4)" fill="#fff" opacity="0.5"/>
+  <rect id="Rectangle-7-Copy-3" width="4" height="4" rx="2" transform="translate(4 10)" fill="#fff"/>
+  <rect id="Rectangle-7-Copy" width="4" height="4" rx="2" transform="translate(10 4)" fill="#fff"/>
+  <rect id="Rectangle-7-Copy-4" width="4" height="4" rx="2" transform="translate(10 10)" fill="#fff"/>
+  <rect id="Rectangle-7-Copy-2" width="4" height="4" rx="2" transform="translate(16 4)" fill="#fff"/>
+  <rect id="Rectangle-7-Copy-5" width="4" height="4" rx="2" transform="translate(16 10)" fill="#fff"/>
+  <rect id="Rectangle-7-Copy-8" width="4" height="4" rx="2" transform="translate(4 16)" fill="#fff"/>
+  <rect id="Rectangle-7-Copy-7" width="4" height="4" rx="2" transform="translate(10 16)" fill="#fff"/>
+  <rect id="Rectangle-7-Copy-6" width="4" height="4" rx="2" transform="translate(16 16)" fill="#fff"/>
+</svg>
